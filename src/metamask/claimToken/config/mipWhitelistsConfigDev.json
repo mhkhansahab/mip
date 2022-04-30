@@ -1,0 +1,16 @@
+{
+  "CONTRACT_ADDRESS": "0x26466E15279f61E4f1d8c3C5C6FccA709733b60f",
+  "SCAN_LINK": "https://etherscan.io/address/0x26466E15279f61E4f1d8c3C5C6FccA709733b60f",
+  "NETWORK": {
+    "NAME": "Ropsten",
+    "SYMBOL": "ETH",
+    "ID": 3
+  },
+  "NFT_NAME": "Mech Identity Protocol Whitelists",
+  "SYMBOL": "MIPW",
+  "GAS_LIMIT": 200000,
+  "CRITICAL_GAS_LIMIT": 400000,
+  "USE_CONFIG_GAS_LIMIT": false,
+  "MARKETPLACE": "Opeansea",
+  "MARKETPLACE_LINK": "https://opensea.io/collection/cheese-identity-protocol-tickets"
+}

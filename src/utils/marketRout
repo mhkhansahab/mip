@@ -1,0 +1,53 @@
+const MARKET_API = '/dev/market';
+
+const MARKET_ADMIN_API = '/dev/admin/market/:id';
+
+enum Methods {
+    get = 'GET',
+    put = 'PUT',
+    delete = 'DELETE',
+}
+
+const GetMarketPageForUsers = {
+    method: Methods.get,
+    url: MARKET_API,
+    additionalData: {
+        params: '',
+        body: '',
+        query: '',
+    },
+    isAuthorized: true,
+};
+
+const UpdateMarketItem = {
+    method: Methods.put,
+    url: MARKET_ADMIN_API,
+    additionalData: {
+        params: { id: 'id детали' },
+        body: { price: '<number>' },
+        query: '',
+    },
+    isAuthorized: true,
+};
+
+const DeleteMarketItem = {
+    method: Methods.delete,
+    url: MARKET_ADMIN_API,
+    additionalData: {
+        params: { id: 'id детали' },
+        body: '',
+        query: '',
+    },
+    isAuthorized: true,
+};
+
+const GetMarketItemById = {
+    method: Methods.get,
+    url: MARKET_ADMIN_API,
+    additionalData: {
+        params: { id: 'id детали' },
+        body: '',
+        query: '',
+    },
+    isAuthorized: true,
+};

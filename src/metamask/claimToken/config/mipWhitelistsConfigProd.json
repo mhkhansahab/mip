@@ -1,0 +1,16 @@
+{
+  "CONTRACT_ADDRESS": "0x3b40afCc41fb5aeA6D1De0e78FA23c4549373efe",
+  "SCAN_LINK": "https://etherscan.io/address/0x3b40afCc41fb5aeA6D1De0e78FA23c4549373efe",
+  "NETWORK": {
+    "NAME": "Ethereum Main",
+    "SYMBOL": "ETH",
+    "ID": 1
+  },
+  "NFT_NAME": "Mech Identity Protocol Whitelists",
+  "SYMBOL": "MIPT",
+  "GAS_LIMIT": 200000,
+  "CRITICAL_GAS_LIMIT": 400000,
+  "USE_CONFIG_GAS_LIMIT": false,
+  "MARKETPLACE": "Opeansea",
+  "MARKETPLACE_LINK": "https://opensea.io/collection/mech-identity-protocol-whitelists"
+}

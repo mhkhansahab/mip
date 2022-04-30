@@ -1,0 +1,16 @@
+{
+  "CONTRACT_ADDRESS": "0xd7edd06f6300c04ac453e33dd726096be2d49efa",
+  "SCAN_LINK": "https://etherscan.io/address/0xd7edd06f6300c04ac453e33dd726096be2d49efa",
+  "NETWORK": {
+    "NAME": "Ethereum Main",
+    "SYMBOL": "ETH",
+    "ID": 1
+  },
+  "NFT_NAME": "Mech Identity Protocol Tickets",
+  "SYMBOL": "MIPT",
+  "GAS_LIMIT": 200000,
+  "CRITICAL_GAS_LIMIT": 400000,
+  "USE_CONFIG_GAS_LIMIT": false,
+  "MARKETPLACE": "Opeansea",
+  "MARKETPLACE_LINK": "https://opensea.io/collection/mech-identity-protocol-tickets"
+}

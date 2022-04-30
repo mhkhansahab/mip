@@ -1,0 +1,16 @@
+{
+    "CONTRACT_ADDRESS": "0x8DC72D3E7656B9D43d784a1bD22BF6B4Fa27f49c",
+    "SCAN_LINK": "https://etherscan.io/address/0x8DC72D3E7656B9D43d784a1bD22BF6B4Fa27f49c",
+    "NETWORK": {
+        "NAME": "Rinkeby",
+        "SYMBOL": "ETH",
+        "ID": 4
+    },
+    "NFT_NAME": "Mech Identity Protocol",
+    "SYMBOL": "MIP",
+    "GAS_LIMIT": 200000,
+    "CRITICAL_GAS_LIMIT": 400000,
+    "USE_CONFIG_GAS_LIMIT": false,
+    "MARKETPLACE": "Opeansea",
+    "MARKETPLACE_LINK": "https://opensea.io/collection/cheese-identity-protocol"
+}

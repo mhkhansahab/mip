@@ -1,24 +1,26 @@
-import styled from "styled-components";
-import lootHeaderBg from "../assets/img/backgroundMarket.png";
-import { Achieve } from "../components/common/Achieve";
-import { MarketItem } from "../components/common/MarketItem";
-import { ReactComponent as RectangleIcon } from "../assets/img/tabRectangle.svg";
 import { useState } from "react";
-import { Switcher } from "../components/common/Switcher";
-import { ReactComponent as SearchIcon } from "../assets/img/search.svg";
 import Select from "react-select";
+import styled from "styled-components";
+import loadable from '@loadable/component';
+import { useParams } from "react-router-dom";
+import { ReactComponent as SearchIcon } from "../assets/img/search.svg";
+import { ReactComponent as RectangleIcon } from "../assets/img/tabRectangle.svg";
+import lootHeaderBg from "../assets/img/backgroundMarket.png";
+import { useGetParamsForDetailsFilter } from "../hooks/useGetParamsForDetailsFilter";
+import { useAdminGetAllSpareParts } from "../hooks/useAdminGetAllSpareParts";
 import {
   checkImageSrc,
   checkSingleParamInSparePart,
   checkTier,
   customStylesForGarageSelect,
 } from "../utils/commonFunctions";
-import { useGetParamsForDetailsFilter } from "../hooks/useGetParamsForDetailsFilter";
-import { useParams } from "react-router-dom";
-import { CustomLoader } from "../components/common/Loader";
-import { Pagination } from "../components/common/Pagination";
 import { imageRoute } from "../utils/api";
-import { useAdminGetAllSpareParts } from "../hooks/useAdminGetAllSpareParts";
+
+const Achieve = loadable(() => import('../components/common/Achieve'));
+const MarketItem = loadable(() => import('../components/common/MarketItem'));
+const Switcher = loadable(() => import('../components/common/Switcher'));
+const CustomLoader = loadable(() => import('../components/common/Loader'));
+const Pagination = loadable(() => import('../components/common/Pagination'));
 
 type MarketPropsType = {
   balance: number;

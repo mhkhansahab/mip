@@ -1,12 +1,14 @@
 import styled from "styled-components";
+import loadable from '@loadable/component';
+import { useHistory } from "react-router-dom";
+import diamond from "../assets/img/smallDiamond.svg";
 import garageHeaderBg from "../assets/img/backgroundGarage.png";
 import titleRobot from "../assets/img/passBonusesRobot.png";
 import { bonusMap, ProfileUserInfo } from "../utils/commonTypes";
-import { Bonus } from "../components/common/Bonus";
-import diamond from "../assets/img/smallDiamond.svg";
-import { NewPass } from "../components/NewPass";
-import { TedButton } from "../components/common/Button/TedButton";
-import { useHistory } from "react-router-dom";
+
+const Bonus = loadable(() => import('../components/common/Bonus'));
+const NewPass = loadable(() => import('../components/NewPass'));
+const TedButton = loadable(() => import('../components/common/Button/TedButton'));
 
 type SeasonpassPropsType = {
   profile: ProfileUserInfo;

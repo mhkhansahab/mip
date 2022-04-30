@@ -11,7 +11,7 @@ type AchievePropsType = {
   countCase: number;
 };
 
-export const Achieve = (props: AchievePropsType) => {
+const Achieve = (props: AchievePropsType) => {
   return (
     <AchieveWrapper>
       {props.achieveType === "diamond" ? (
@@ -35,6 +35,8 @@ export const Achieve = (props: AchievePropsType) => {
     </AchieveWrapper>
   );
 };
+
+export default Achieve;
 
 const AchieveWrapper = styled.div`
   padding: 34px 50px;

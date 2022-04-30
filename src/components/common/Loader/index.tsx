@@ -10,7 +10,7 @@ type CustomLoaderProps = {
   size?: number;
 };
 
-export const CustomLoader = (props: CustomLoaderProps) => {
+const CustomLoader = (props: CustomLoaderProps) => {
   return (
     <LoadWrapper
       margin={props.margin}
@@ -22,6 +22,8 @@ export const CustomLoader = (props: CustomLoaderProps) => {
     </LoadWrapper>
   );
 };
+
+export default CustomLoader;
 
 const LoadWrapper = styled.div<{
   margin?: string;

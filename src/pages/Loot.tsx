@@ -1,11 +1,14 @@
-import styled from "styled-components";
-import { LootItem } from "../components/common/LootItem";
-import lootHeaderBg from "../assets/img/lootHeaderBg.png";
-import { Achieve } from "../components/common/Achieve";
 import { useState } from "react";
+import styled from "styled-components";
+import loadable from '@loadable/component';
 import { ReactComponent as DiamondIcon } from "../assets/img/smallDiamond.svg";
-import { useAdminPostAllLootBoxes } from "../hooks/useAdminPostAllLootBoxes";
+import lootHeaderBg from "../assets/img/lootHeaderBg.png";
 import { ProfileUserSpins } from "../utils/commonTypes";
+import { useAdminPostAllLootBoxes } from "../hooks/useAdminPostAllLootBoxes";
+
+const Achieve = loadable(() => import('../components/common/Achieve'));
+const LootItem = loadable(() => import('../components/common/LootItem'));
+
 
 type LootPropsType = {
   balance: number;

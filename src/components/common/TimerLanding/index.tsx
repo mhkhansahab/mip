@@ -8,7 +8,7 @@ type TimerPropsType = {
   expiryTimestamp: Date;
 };
 
-export function TimerLanding({ expiryTimestamp }: TimerPropsType) {
+export default function TimerLanding({ expiryTimestamp }: TimerPropsType) {
   const { seconds, minutes, hours } = useTimer({
     expiryTimestamp,
     onExpire: () => console.warn("onExpire called"),

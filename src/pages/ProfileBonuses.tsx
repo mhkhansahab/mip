@@ -1,29 +1,32 @@
 import styled from "styled-components";
-import photo from "../assets/img/photo.png";
-import bgNoActive from "../assets/img/bonusesBGNoActive.svg";
-import bgActive from "../assets/img/bonusesBGActive.svg";
-import diamond from "../assets/img/smallDiamond.svg";
+import { useHistory } from "react-router-dom";
+import { useState } from "react";
+import Slider from "react-slick";
+import loadable from '@loadable/component';
 import { ReactComponent as ArrowRight } from "../assets/img/bonusesArrow.svg";
-import robotPass from "../assets/img/bonusesRobotPass.png";
 import { ReactComponent as LogoutIcon } from "../assets/img/logout.svg";
 import { ReactComponent as BorderTop } from "../assets/img/bonusesBorderTop.svg";
 import { ReactComponent as BorderBottom } from "../assets/img/BonusesBorderBottom.svg";
 import { ReactComponent as BonusSetting } from "../assets/img/bonusSettings.svg";
-import { useHistory } from "react-router-dom";
-import { useState } from "react";
-import { Bonus } from "../components/common/Bonus";
-import { TedButton } from "../components/common/Button/TedButton";
-import { BonusesHorizontItem } from "../components/common/BonusesHorizontItem";
-import { BonusesVerticalItem } from "../components/common/BonusesVerticalItem";
-import { BonusesNews } from "../components/common/BonusesNews";
+import bgNoActive from "../assets/img/bonusesBGNoActive.svg";
+import bgActive from "../assets/img/bonusesBGActive.svg";
+import diamond from "../assets/img/smallDiamond.svg";
+import robotPass from "../assets/img/bonusesRobotPass.png";
+import photo from "../assets/img/photo.png";
 import { bonusMap, ProfileUserInfo } from "../utils/commonTypes";
 import { bonusesNewsMap } from "../utils/commonTypes";
 import { verticalItemsMap } from "../utils/commonTypes";
-import Slider from "react-slick";
-import { useGetHistoryUsers } from "../hooks/useGetHistoryUsers";
 import { checkImageSrc } from "../utils/commonFunctions";
-import { CustomLoader } from "../components/common/Loader";
+import { useGetHistoryUsers } from "../hooks/useGetHistoryUsers";
 import { SlickArrowLeftProfile, SlickArrowRightProfile } from "../components/common/SlickArrow/SlickArrow";
+
+const BonusesHorizontItem = loadable(() => import('../components/common/BonusesHorizontItem'));
+const BonusesVerticalItem = loadable(() => import('../components/common/BonusesVerticalItem'));
+const BonusesNews = loadable(() => import('../components/common/BonusesNews'));
+const Bonus = loadable(() => import('../components/common/Bonus'));
+const CustomLoader = loadable(() => import('../components/common/Loader'));
+const TedButton = loadable(() => import('../components/common/Button/TedButton'))
+
 // DELETE CarouselProvider
 
 type ProfileBonusesPropsType = {

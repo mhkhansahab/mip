@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { TedButton } from "../Button/TedButton";
+import TedButton from "../Button/TedButton";
 import { Formik } from "formik";
 import { useAdminGetOneBoxLoot } from "../../../hooks/useAdminGetOneBoxLoot";
 import { useAdminPostEditLootBox } from "../../../hooks/useAdminPostEditLootBox";

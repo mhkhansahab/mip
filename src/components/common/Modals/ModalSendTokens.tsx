@@ -1,9 +1,10 @@
 import Modal from "../Modal";
 import styled from "styled-components";
-import { TedButton } from "../Button/TedButton";
+import loadable from '@loadable/component';
 import { Formik } from "formik";
 import smallDiamond from "../../../assets/img/smallDiamond.svg";
 import validationSendTokensSchema from "./validation/validationSendTokensSchema";
+const TedButton = loadable(() => import('../Button/TedButton'));
 
 type PropsTypeWinSpin = {
   visible: boolean;

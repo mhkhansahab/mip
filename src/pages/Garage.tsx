@@ -1,31 +1,34 @@
-import styled from "styled-components";
-import { TedButton } from "../components/common/Button/TedButton";
-import garageHeaderBg from "../assets/img/backgroundGarage.png";
-import petGarage from "../assets/img/petGarage.svg";
-import refresh from "../assets/img/refreshButtonGarage.svg";
-import { RobotItemInterface } from "../components/common/RobotItemGarage";
-import { InventoryItem } from "../components/common/InventoryItem";
-import { RobotModel } from "../components/RobotModel";
 import { useEffect, useState } from "react";
-import { useGetAllRobotsInProfile } from "../hooks/useGetAllRobotsInProfile";
-import { useGetAllSpareParts } from "../hooks/useGetAllSpareParts";
-import { RobotType } from "../utils/commonTypes";
-import { imageRoute, moralis_server_url, moralis_id, network_id } from "../utils/api";
-import { CustomLoader } from "../components/common/Loader";
-import { usePutRobotManipulation } from "../hooks/usePutRobotManipulation";
-import { useParams } from "react-router-dom";
-import { Pagination } from "../components/common/Pagination";
+import Moralis from "moralis";
 import Select from "react-select";
+import styled from "styled-components";
+import { useParams } from "react-router-dom";
+import loadable from '@loadable/component';
+
+import { imageRoute, moralis_server_url, moralis_id, network_id } from "../utils/api";
 import { useGetParamsForDetailsFilter } from "../hooks/useGetParamsForDetailsFilter";
-import { ReactComponent as SearchIcon } from "../assets/img/search.svg";
-import { checkImageSrc, checkSingleParamInSparePart, checkTier, customStylesForGarageSelect } from "../utils/commonFunctions";
-import Modal from "../components/common/Modal";
+import { useGetAllRobotsInProfile } from "../hooks/useGetAllRobotsInProfile";
+import { usePutRobotManipulation } from "../hooks/usePutRobotManipulation";
 import { useMoveRobotToGarage } from "../hooks/useMoveRobotToGarage";
-import diamond from "../assets/img/smallDiamond.svg";
+import { useGetAllSpareParts } from "../hooks/useGetAllSpareParts";
 import { useGetSellDetails } from "../hooks/useGetSellDetails";
 import { useGetRefreshNFT } from "../hooks/useGetRefreshNFT";
 import { useMintRobot } from "../hooks/useMintRobot";
-import Moralis from "moralis";
+import { RobotType } from "../utils/commonTypes";
+import { checkImageSrc, checkSingleParamInSparePart, checkTier, customStylesForGarageSelect } from "../utils/commonFunctions";
+import { ReactComponent as SearchIcon } from "../assets/img/search.svg";
+import garageHeaderBg from "../assets/img/backgroundGarage.png";
+import refresh from "../assets/img/refreshButtonGarage.svg";
+import diamond from "../assets/img/smallDiamond.svg";
+import petGarage from "../assets/img/petGarage.svg";
+
+const Modal = loadable(() => import('../components/common/Modal'));
+const CustomLoader = loadable(() => import('../components/common/Loader'));
+const TedButton = loadable(() => import('../components/common/Button/TedButton'));
+const RobotItemInterface = loadable(() => import('../components/common/RobotItemGarage'));
+const RobotModel = loadable(() => import('../components/RobotModel'));
+const InventoryItem = loadable(() => import('../components/common/InventoryItem'));
+const Pagination = loadable(() => import('../components/common/Pagination'));
 
 type GaragePropsType = {
   garageCount: 1 | 2 | 3;

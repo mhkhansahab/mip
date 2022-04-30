@@ -14,7 +14,7 @@ type LootItemPropsType = {
   src: string;
 };
 
-export const BonusesHorizontItem = (props: LootItemPropsType) => {
+const BonusesHorizontItem = (props: LootItemPropsType) => {
   return (
     <MarketBG>
       <MarketItemWrapper>
@@ -37,6 +37,8 @@ export const BonusesHorizontItem = (props: LootItemPropsType) => {
     </MarketBG>
   );
 };
+
+export default BonusesHorizontItem;
 
 const CircleIconStyled = styled(CircleIcon)`
   fill: #29efa8;

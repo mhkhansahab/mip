@@ -1,6 +1,6 @@
 import Modal from "../Modal";
 import styled from "styled-components";
-import { TedButton } from "../Button/TedButton";
+import TedButton from "../Button/TedButton";
 import { Formik } from "formik";
 import { useAdminPostAddNewLootBox } from "../../../hooks/useAdminPostAddNewLootBox";
 import validationAddLootBoxSchema from "./validation/validationAddLootBoxSchema";

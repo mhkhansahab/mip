@@ -3,7 +3,7 @@ import styled from "styled-components";
 import borderMarket from "../../../assets/img/borderMarketItem.svg";
 import lootItemBorderImg from "../../../assets/img/lootItemBorder.svg";
 import { ReactComponent as CircleIcon } from "../../../assets/img/modalBGItemSpin.svg";
-import { TedButton } from "../Button/TedButton";
+import TedButton from "../Button/TedButton";
 import { useHistory } from "react-router-dom";
 import { useGetSellDetails } from "../../../hooks/useGetSellDetails";
 
@@ -16,7 +16,7 @@ type PropsTypeWinSpin = {
   freeType: boolean;
 };
 
-export function ModalWinnerSpin(props: PropsTypeWinSpin) {
+export default function ModalWinnerSpin(props: PropsTypeWinSpin) {
   const history = useHistory();
 
   const { mutate: dataSellDetail } = useGetSellDetails();

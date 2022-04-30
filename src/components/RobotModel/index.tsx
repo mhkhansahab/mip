@@ -8,7 +8,7 @@ type RobotModelPropsType = {
   id: number | null;
 };
 
-export const RobotModel = (props: RobotModelPropsType) => {
+const RobotModel = (props: RobotModelPropsType) => {
   const getImgSrc = (imgArr: ImageTypeInRobotPart[]) => {
     return imgArr.filter(img => img.type === "Layer").length
       ? imgArr.filter(img => img.type === "Layer")[0].key
@@ -47,6 +47,8 @@ export const RobotModel = (props: RobotModelPropsType) => {
     </>
   );
 };
+
+export default RobotModel;
 
 const RobotModelImage = styled.img<{ index: string }>`
   position: absolute;

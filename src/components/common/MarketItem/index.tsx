@@ -2,7 +2,7 @@ import styled from "styled-components";
 import smallDiamond from "../../../assets/img/smallDiamond.svg";
 import borderMarket from "../../../assets/img/borderMarketItem.svg";
 import { ReactComponent as CircleIcon } from "../../../assets/img/ellipseMarket.svg";
-import { TedButton } from "../Button/TedButton";
+import TedButton from "../Button/TedButton";
 import { Tier } from "../Tier";
 import Modal from "../Modal";
 import { useState } from "react";
@@ -20,7 +20,7 @@ type MarketItemPropsType = {
   count: number;
 };
 
-export const MarketItem = (props: MarketItemPropsType) => {
+const MarketItem = (props: MarketItemPropsType) => {
   const [visAcceptBuyDetail, setVisAcceptBuyDetail] = useState<boolean>(false);
 
   const { mutate: buyDetail } = useGetBuyDetails();
@@ -87,6 +87,8 @@ export const MarketItem = (props: MarketItemPropsType) => {
     </MarketBG>
   );
 };
+
+export default MarketItem;
 
 const AcceptSell = styled.div`
   background: green;

@@ -8,7 +8,7 @@ type PaginationPropsType = {
   itemsPerPage: number;
 };
 
-export const Pagination = (props: PaginationPropsType) => {
+const Pagination = (props: PaginationPropsType) => {
   const history = useHistory();
   const maxCount = Math.ceil(props.itemsCount / props.itemsPerPage);
 
@@ -45,6 +45,8 @@ export const Pagination = (props: PaginationPropsType) => {
     </PaginationContent>
   );
 };
+
+export default Pagination;
 
 const PaginationContent = styled.div`
   display: flex;

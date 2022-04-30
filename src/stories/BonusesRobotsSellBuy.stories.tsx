@@ -1,5 +1,5 @@
 import { ComponentStory, ComponentMeta } from "@storybook/react";
-import { BonusesHorizontItem } from "../components/common/BonusesHorizontItem/BonusesHorizontItem";
+import BonusesHorizontItem from "../components/common/BonusesHorizontItem";
 
 export default {
   title: "Example/BonusesItem",

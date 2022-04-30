@@ -1,5 +1,5 @@
 import { ComponentStory, ComponentMeta } from "@storybook/react";
-import { Bonus } from "../components/common/Bonus/Bonus";
+import Bonus from "../components/common/Bonus";
 
 export default {
   title: "Example/BonusesItem",

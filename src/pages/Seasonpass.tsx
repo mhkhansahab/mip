@@ -1,17 +1,19 @@
 import styled from "styled-components";
-import passHeaderBg from "../assets/img/bgImgPass.png";
+import loadable from '@loadable/component';
+import { connect, ticketPay } from "../metamask/balanceAndGaragePaidExample";
 import { ReactComponent as BgEffect2 } from "../assets/img/bgEffectPass2.svg";
 import { ReactComponent as BgEffect1 } from "../assets/img/bgEffectPass1.svg";
 import { ReactComponent as Star } from "../assets/img/starSpinnerBG.svg";
+import passHeaderBg from "../assets/img/bgImgPass.png";
 import FlyPass1 from "../assets/img/flyTicket1.png";
 import FlyPass2 from "../assets/img/flyTicket2.png";
 import FlyPass3 from "../assets/img/flyTicket3.png";
-import { TedButton } from "../components/common/Button/TedButton";
-import { LandingItem } from "../components/LandingItem";
 import passport from "../assets/img/passport.png";
 import accept from "../assets/img/correct.png";
-import { connect, ticketPay } from "../metamask/balanceAndGaragePaidExample";
 import { TicketPayType } from "../utils/commonTypes";
+
+const TedButton = loadable(() => import('../components/common/Button/TedButton'));
+const LandingItem = loadable(() => import('../components/LandingItem'));
 
 type SeasonpassPropsType = {
   lvl: number;
@@ -77,7 +79,7 @@ const Seasonpass = (props: SeasonpassPropsType) => {
               <ButtonWrapper>
                 <TedButton
                   color="blue"
-                  onclick={() => {}}
+                  onclick={() => { }}
                   size="big"
                   width="192"
                   children="READ MORE"

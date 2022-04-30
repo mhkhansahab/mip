@@ -58,7 +58,7 @@ const tableData = [
   },
 ];
 
-export const TopTable = () => {
+const TopTable = () => {
   const columns = React.useMemo(
     () => [
       {
@@ -141,6 +141,8 @@ export const TopTable = () => {
     </TableWrapper>
   );
 };
+
+export default TopTable;
 
 const TableWrapper = styled.div`
   max-width: 1080px;

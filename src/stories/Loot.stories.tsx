@@ -1,7 +1,7 @@
 import React from "react";
 import { ComponentStory, ComponentMeta } from "@storybook/react";
 import "./reset.css";
-import { LootItem } from "../components/common/LootItem";
+import LootItem from "../components/common/LootItem";
 
 export default {
   title: "Example/Loot Item",

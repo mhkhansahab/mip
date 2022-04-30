@@ -11,18 +11,18 @@ import { ReactComponent as BorderBottom } from "../../assets/img/BonusesBorderBo
 import { ReactComponent as BonusSetting } from "../../assets/img/bonusSettings.svg";
 import { useHistory } from "react-router-dom";
 import { useState } from "react";
-import { Bonus } from "../common/Bonus";
-import { TedButton } from "../common/Button/TedButton";
-import { BonusesHorizontItem } from "../common/BonusesHorizontItem";
-import { BonusesVerticalItem } from "../common/BonusesVerticalItem";
-import { BonusesNews } from "../common/BonusesNews";
+import Bonus from "../common/Bonus";
+import TedButton from "../common/Button/TedButton";
+import BonusesHorizontItem from "../common/BonusesHorizontItem";
+import BonusesVerticalItem from "../common/BonusesVerticalItem";
+import BonusesNews from "../common/BonusesNews";
 import { bonusMap, ProfileUserInfo } from "../../utils/commonTypes";
 import { bonusesNewsMap } from "../../utils/commonTypes";
 import { verticalItemsMap } from "../../utils/commonTypes";
 import Slider from "react-slick";
 import { useGetHistoryUsers } from "../../hooks/useGetHistoryUsers";
 import { checkImageSrc } from "../../utils/commonFunctions";
-import { CustomLoader } from "../common/Loader";
+import CustomLoader from "../common/Loader";
 import {
   SlickArrowLeftProfile,
   SlickArrowRightProfile,

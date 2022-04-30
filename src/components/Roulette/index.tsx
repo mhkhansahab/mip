@@ -4,8 +4,8 @@ import styled from "styled-components";
 import { imageRoute } from "../../utils/api";
 import { checkImageSrc, checkTier } from "../../utils/commonFunctions";
 import arrWin from "../../assets/img/arrowSpinnerWinItem.png";
-import { ModalMultiWinnerSpin } from "../common/Modals/ModalMultiWinnerSpin";
-import { ModalWinnerSpin } from "../common/Modals/ModalWinnerSpin";
+import ModalMultiWinnerSpin from "../common/Modals/ModalMultiWinnerSpin";
+import ModalWinnerSpin from "../common/Modals/ModalWinnerSpin";
 import borderMarket from "../../assets/img/borderMarketItem.svg";
 import { ReactComponent as CircleIcon } from "../../assets/img/modalBGItemSpin.svg";
 import { Tier } from "../common/Tier";
@@ -21,7 +21,7 @@ type RoulletePropsType = {
 
 const itemWidth = 220;
 
-export const Roullete = (props: RoulletePropsType) => {
+const Roullete = (props: RoulletePropsType) => {
   const [visibleWinSpin, setVisibleWinSpin] = useState<boolean>(false);
   const [visibleMultiWinSpin, setMultiVisibleWinSpin] =
     useState<boolean>(false);
@@ -124,6 +124,8 @@ export const Roullete = (props: RoulletePropsType) => {
     </RoulleteContainer>
   );
 };
+
+export default Roullete;
 
 const DescrSpinItem = styled.div`
   position: absolute;

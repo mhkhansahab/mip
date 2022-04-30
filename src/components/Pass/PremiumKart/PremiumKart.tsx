@@ -11,7 +11,7 @@ type PremiumKartPassPropsType = {
   src: string;
 };
 
-export const PremiumKart = (props: PremiumKartPassPropsType) => {
+const PremiumKart = (props: PremiumKartPassPropsType) => {
   return (
     <>
       {props.coin ? (
@@ -35,3 +35,5 @@ export const PremiumKart = (props: PremiumKartPassPropsType) => {
     </>
   );
 };
+
+export default PremiumKart;

@@ -1,11 +1,11 @@
+import React from "react";
 import Slider from "react-slick";
 import styled from "styled-components";
-import { FreeKart } from "../../Pass/FreeKart";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import { PremiumKart } from "../../Pass/PremiumKart";
 import { useGetSeasonPass } from "../../../hooks/useGetSeasonPass";
-import React from "react";
+import FreeKart from "../../Pass/FreeKart/FreeKart";
+import PremiumKart from "../../Pass/PremiumKart/PremiumKart";
 import {
   SlickArrowLeftNewPass,
   SlickArrowRightNewPass,

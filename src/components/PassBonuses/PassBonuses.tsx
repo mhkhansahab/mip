@@ -2,10 +2,10 @@ import styled from "styled-components";
 import garageHeaderBg from "../../assets/img/backgroundGarage.png";
 import titleRobot from "../../assets/img/passBonusesRobot.png";
 import { bonusMap, ProfileUserInfo } from "../../utils/commonTypes";
-import { Bonus } from "../common/Bonus";
+import Bonus from "../common/Bonus";
 import diamond from "../../assets/img/smallDiamond.svg";
 import { NewPass } from "./NewPass";
-import { TedButton } from "../common/Button/TedButton";
+import TedButton from "../common/Button/TedButton";
 import { useHistory } from "react-router-dom";
 
 type SeasonpassPropsType = {

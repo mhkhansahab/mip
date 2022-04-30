@@ -5,8 +5,8 @@ import freeBGPass from "../../assets/img/freePassBGTittle.svg";
 import freeIconPass from "../../assets/img/freePassIconTittle.svg";
 import premBGPass from "../../assets/img/premPassBGTittle.svg";
 import premIconPass from "../../assets/img/premPassIconTittle.svg";
-import { FreeKart } from "./FreeKart";
-import { PremiumKart } from "./PremiumKart";
+import FreeKart from "./FreeKart/FreeKart";
+import PremiumKart from "./PremiumKart/PremiumKart";
 
 export function Pass() {
   return (

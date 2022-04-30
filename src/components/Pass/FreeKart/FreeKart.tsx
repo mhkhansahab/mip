@@ -15,7 +15,7 @@ type KartPassPropsType = {
   src: string;
 };
 
-export const FreeKart = (props: KartPassPropsType) => {
+const FreeKart = (props: KartPassPropsType) => {
   return (
     <>
       {props.coin ? (
@@ -51,6 +51,8 @@ export const FreeKart = (props: KartPassPropsType) => {
     </>
   );
 };
+
+export default FreeKart;
 
 const KartFree = styled.div<{
   active: boolean;

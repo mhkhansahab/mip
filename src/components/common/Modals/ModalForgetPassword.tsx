@@ -1,8 +1,9 @@
 import Modal  from "../Modal";
 import styled from "styled-components";
-import { TedButton } from "../Button/TedButton";
+import loadable from '@loadable/component';
 import { Formik } from "formik";
 import validationForgetPassword from "./validation/validationForgetPasswordSchema";
+const TedButton = loadable(() => import('../Button/TedButton'));
 
 type PropsTypeWinSpin = {
   visible: boolean;

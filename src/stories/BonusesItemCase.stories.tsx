@@ -1,5 +1,5 @@
 import { ComponentStory, ComponentMeta } from "@storybook/react";
-import { BonusesVerticalItem } from "../components/common/BonusesVerticalItem/BonusesVerticalItem";
+import BonusesVerticalItem from "../components/common/BonusesVerticalItem";
 
 export default {
   title: "Example/BonusesItem",

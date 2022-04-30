@@ -6,18 +6,18 @@ import { ReactComponent as Star } from "../assets/img/starSpinnerBG.svg";
 import FlyPass1 from "../assets/img/flyTicket1.png";
 import FlyPass2 from "../assets/img/flyTicket2.png";
 import FlyPass3 from "../assets/img/flyTicket3.png";
-import { TedButton } from "../components/common/Button/TedButton";
+import TedButton from "../components/common/Button/TedButton";
 import { TimerPass } from "../components/common/TimerPassFinished";
 import Slider from "react-slick";
-import { FreeKart } from "../components/Pass/FreeKart";
-import { PremiumKart } from "../components/Pass/PremiumKart";
+import FreeKart from "../components/Pass/FreeKart/FreeKart";
+import PremiumKart from "../components/Pass/PremiumKart/PremiumKart";
 import freeIconPass from "../assets/img/freePassIconTittle.svg";
 import premIconPass from "../assets/img/premPassIconTittle.png";
 import premBGPass from "../assets/img/premPassBGTittle.png";
 import freeBGPass from "../assets/img/freePassBGTittle.png";
 import { ReactComponent as BonArrow } from "../assets/img/bonusesArrow.svg";
 import { useGetSeasonPass } from "../hooks/useGetSeasonPass";
-import { CustomLoader } from "../components/common/Loader";
+import CustomLoader from "../components/common/Loader";
 
 type SeasonpassPropsType = {
   lvl: number;

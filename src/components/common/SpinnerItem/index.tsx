@@ -12,7 +12,7 @@ type LootItemPropsType = {
   tier: string;
 };
 
-export const SpinnerItem = (props: LootItemPropsType) => {
+const SpinnerItem = (props: LootItemPropsType) => {
   const nameDetail = props.name.split("_").slice(-2).join(" ");
 
   return (
@@ -31,6 +31,9 @@ export const SpinnerItem = (props: LootItemPropsType) => {
     </SpinItemBG>
   );
 };
+
+export default SpinnerItem;
+
 const TypeDetails = styled.div<{
   type: string;
 }>`

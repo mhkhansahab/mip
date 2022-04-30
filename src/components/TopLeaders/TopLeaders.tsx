@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { LeaderPosition } from "./LeaderPosition";
 
-export function TopLeaders() {
+export default function TopLeaders() {
   const tableData = [
     {
       id: 1,

@@ -1,8 +1,10 @@
-import styled from "styled-components";
-import { TopLeaders } from "../components/TopLeaders/TopLeaders";
-import { TopTable } from "../components/TopTable";
-import topHeaderBg from "../assets/img/topBackground.png";
 import { useState } from "react";
+import styled from "styled-components";
+import loadable from '@loadable/component';
+import topHeaderBg from "../assets/img/topBackground.png";
+
+const TopLeaders = loadable(() => import('../components/TopLeaders/TopLeaders'));
+const TopTable = loadable(() => import('../components/TopTable'));
 
 type TopPropsType = {};
 

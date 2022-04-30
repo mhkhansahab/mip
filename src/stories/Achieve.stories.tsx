@@ -1,6 +1,6 @@
 import { ComponentStory, ComponentMeta } from "@storybook/react";
 import "./reset.css";
-import { Achieve } from "../components/common/Achieve";
+import Achieve from "../components/common/Achieve";
 
 export default {
   title: "Example/Achieve in Loot",

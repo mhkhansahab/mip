@@ -1,23 +1,25 @@
 import styled from "styled-components";
+import loadable from '@loadable/component';
+import { useEffect, useState } from "react";
+import { useHistory, useParams } from "react-router-dom";
+import { ReactComponent as Star } from "../assets/img/starSpinnerBG.svg";
 import lootHeaderBg from "../assets/img/backgroundSpinner.png";
 import backspinner from "../assets/img/backSpinner.svg";
 import arrow from "../assets/img/arrowBackSpinner.svg";
-import { ReactComponent as Star } from "../assets/img/starSpinnerBG.svg";
 import smallDiamond from "../assets/img/smallDiamond.svg";
-import { TedButton } from "../components/common/Button/TedButton";
-import { MultiBtn } from "../components/common/Button/MultiBtn";
-import { SpinnerItem } from "../components/common/SpinnerItem";
-import { useEffect, useState } from "react";
-import { useHistory, useParams } from "react-router-dom";
-import { useAdminGetOneBoxLoot } from "../hooks/useAdminGetOneBoxLoot";
-import { Roullete } from "../components/Roulette/Roullete";
 import { checkImageSrc, checkTier } from "../utils/commonFunctions";
-import { imageRoute } from "../utils/api";
-import { usePostSpinLootBox } from "../hooks/usePostSpinLootBox";
-import { CustomLoader } from "../components/common/Loader";
-import { ModalWinnerSpin } from "../components/common/Modals/ModalWinnerSpin";
-import { ModalMultiWinnerSpin } from "../components/common/Modals/ModalMultiWinnerSpin";
 import { ProfileUserSpins } from "../utils/commonTypes";
+import { imageRoute } from "../utils/api";
+import { useAdminGetOneBoxLoot } from "../hooks/useAdminGetOneBoxLoot";
+import { usePostSpinLootBox } from "../hooks/usePostSpinLootBox";
+
+const CustomLoader = loadable(() => import('../components/common/Loader'));
+const TedButton = loadable(() => import('../components/common/Button/TedButton'))
+const MultiBtn = loadable(() => import('../components/common/Button/MultiBtn'));
+const SpinnerItem = loadable(() => import('../components/common/SpinnerItem'));
+const Roullete = loadable(() => import('../components/Roulette'));
+const ModalWinnerSpin = loadable(() => import('../components/common/Modals/ModalWinnerSpin'));
+const ModalMultiWinnerSpin = loadable(() => import('../components/common/Modals/ModalMultiWinnerSpin'));
 
 type SpinerPropsType = {
   balance: number;

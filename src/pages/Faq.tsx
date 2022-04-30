@@ -1,8 +1,10 @@
 import { useState } from "react";
 import styled from "styled-components";
+import loadable from '@loadable/component';
 import spriteFaq from "../assets/img/spriteFaq.svg";
-import { AccordionFaq } from "../components/AccordionFaq";
 import { faqSectionData } from "../utils/commonTypes";
+
+const AccordionFaq = loadable(() => import('../components/AccordionFaq'));
 
 type FaqPropsType = {};
 

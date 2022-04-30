@@ -4,10 +4,11 @@ import styled from "styled-components";
 import loadable from '@loadable/component';
 import { useGetProfile } from "../../../hooks/useGetProfile";
 import { Context } from "../../../utils/commonFunctions";
-import { Footer } from "../../Footer";
 import { LeftMenu, TopMenu } from "../../Menu";
-import { SnackBar } from "../SnackBar";
-import { CustomLoader } from "../Loader";
+import CustomLoader from "../Loader";
+
+const Footer = loadable(() => import('../../Footer'));
+const SnackBar = loadable(() => import('../SnackBar'));
 
 const Modal = loadable(() => import('../Modal'));
 const ModalAutorization = loadable(() => import('../Modals/ModalAutorization'));
@@ -29,16 +30,6 @@ const Top = lazy(() => import('../../../pages/Top'));
 const PassBonuses = lazy(() => import('../../../pages/PassBonuses'));
 const ProfileBonuses = lazy(() => import('../../../pages/ProfileBonuses'));
 const Spiner = lazy(() => import('../../../pages/SpinerPage'));
-
-// import Modal from "../Modal";
-// import { ModalAutorization } from "../Modals/ModalAutorization";
-// import { ModalForgetPassword } from "../Modals/ModalForgetPassword";
-// import { ModalNewPassword } from "../Modals/ModalNewPassword";
-// import { ModalProfileSettings } from "../Modals/ModalProfileSettings";
-// import { ModalSendTokens } from "../Modals/ModalSendTokens";
-// import { ModalSettingLanguage } from "../Modals/ModalSettingLanguage";
-// import { ModalSignIn } from "../Modals/ModalSignIn";
-
 
 export const PageWrapper = () => {
   const [isAuth, setIsAuth] = useState<boolean>(false);

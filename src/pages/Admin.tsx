@@ -1,12 +1,15 @@
 import { useEffect } from "react";
 import { Route, useLocation, useHistory } from "react-router-dom";
 import styled from "styled-components";
-import { AdminDetails } from "../components/AdminDetails";
-import { AdminLootBox } from "../components/AdminLootBox";
-import { AdminEditCase } from "../components/AdminLootBox/AdminEditCase";
+import loadable from '@loadable/component';
 import logoImg from "../assets/img/logo.svg";
-import { AdminLinkMenu } from "../components/common/LinkMenu/LinkMenu";
-import { AdminMarket } from "../components/AdminMarket";
+import { AdminLinkMenu } from "../components/common/LinkMenu";
+
+const AdminDetails = loadable(() => import('../components/AdminDetails'));
+const AdminLootBox = loadable(() => import('../components/AdminLootBox'));
+const AdminEditCase = loadable(() => import('../components/AdminLootBox/AdminEditCase'));
+const AdminMarket = loadable(() => import('../components/AdminMarket'));
+
 
 type adminLinkPagesType = {
   title: "details" | "lootboxes" | "market";

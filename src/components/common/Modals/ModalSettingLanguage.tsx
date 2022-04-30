@@ -4,7 +4,7 @@ import { Formik } from "formik";
 import rusImg from "../../../assets/img/russia.png";
 import engImg from "../../../assets/img/english.png";
 import frcImg from "../../../assets/img/franch.png";
-import { Switcher } from "../Switcher";
+import Switcher from "../Switcher";
 import { useEffect, useState } from "react";
 import Select from "react-select";
 import { customStylesForSettingsSelect } from "../../../utils/commonFunctions";

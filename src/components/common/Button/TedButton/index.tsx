@@ -1,7 +1,7 @@
 import { ReactElement } from "react";
 import styled from "styled-components";
 import confirmedAccept from "../../../../assets/img/confirmV.svg";
-import { CustomLoader } from "../../Loader";
+import CustomLoader from "../../Loader";
 
 type PropsButton = {
   children: string | ReactElement<any, any>;
@@ -16,7 +16,7 @@ type PropsButton = {
   loading?: boolean;
 };
 
-export const TedButton = (props: PropsButton) => {
+const TedButton = (props: PropsButton) => {
   return (
     <ButtonWrapper>
       <Button
@@ -35,6 +35,8 @@ export const TedButton = (props: PropsButton) => {
     </ButtonWrapper>
   );
 };
+
+export default TedButton;
 
 const ButtonWrapper = styled.div`
   width: 100%;

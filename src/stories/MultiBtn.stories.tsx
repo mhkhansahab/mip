@@ -1,6 +1,6 @@
 import React from "react";
 import { ComponentStory, ComponentMeta } from "@storybook/react";
-import { MultiBtn } from "../components/common/Button/MultiBtn";
+import MultiBtn from "../components/common/Button/MultiBtn";
 
 export default {
   title: "Example/Button",

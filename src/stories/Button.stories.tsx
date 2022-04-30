@@ -1,6 +1,6 @@
 import React from "react";
 import { ComponentStory, ComponentMeta } from "@storybook/react";
-import { TedButton } from "../components/common/Button/TedButton/TedButton";
+import TedButton from "../components/common/Button/TedButton";
 
 export default {
   title: "Example/Button",

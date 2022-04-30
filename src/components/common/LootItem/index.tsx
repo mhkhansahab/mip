@@ -14,7 +14,7 @@ type LootItemPropsType = {
   disabled: boolean;
 };
 
-export const LootItem = (props: LootItemPropsType) => {
+const LootItem = (props: LootItemPropsType) => {
   const colorRarity = props.rarity.toLocaleLowerCase();
 
   return (
@@ -47,6 +47,8 @@ export const LootItem = (props: LootItemPropsType) => {
     </LootItemWrapper>
   );
 };
+
+export default LootItem;
 
 const LootItemWrapper = styled.div<{
   color: string;

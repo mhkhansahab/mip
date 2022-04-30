@@ -2,7 +2,7 @@ import styled from "styled-components";
 import smallDiamond from "../../../assets/img/smallDiamond.svg";
 import borderMarket from "../../../assets/img/borderMarketItem.svg";
 import { ReactComponent as CircleIcon } from "../../../assets/img/ellipseMarket.svg";
-import { TedButton } from "../Button/TedButton";
+import TedButton from "../Button/TedButton";
 import { Tier } from "../Tier";
 import { Dispatch, SetStateAction } from "react";
 
@@ -26,7 +26,8 @@ type LootItemPropsType = {
   >;
   isDisable: number | null;
 };
-export const InventoryItem = (props: LootItemPropsType) => {
+
+const InventoryItem = (props: LootItemPropsType) => {
   return (
     <MarketBG>
       <MarketItemWrapper>
@@ -75,6 +76,8 @@ export const InventoryItem = (props: LootItemPropsType) => {
     </MarketBG>
   );
 };
+
+export default InventoryItem;
 
 const RarityTitle = styled.div`
   background: #c101c9;

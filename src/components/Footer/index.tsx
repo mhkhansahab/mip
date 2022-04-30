@@ -8,7 +8,7 @@ import { ReactComponent as FooterTelega } from "../../assets/img/footerTelega.sv
 import { ReactComponent as FooterFacebook } from "../../assets/img/footerFacebook.svg";
 import { ReactComponent as FooterInsta } from "../../assets/img/footerInsta.svg";
 
-export const Footer = () => {
+const Footer = () => {
   return (
     <FooterWrapper>
       <LeftFooter>
@@ -58,6 +58,8 @@ export const Footer = () => {
     </FooterWrapper>
   );
 };
+
+export default Footer;
 
 const IconYoutube = styled(FooterYoutube)``;
 const IconVk = styled(FooterVk)``;

@@ -20,7 +20,7 @@ type PropsTypeWinSpin = {
   freeType: boolean;
 };
 
-export function ModalMultiWinnerSpin({
+export default function ModalMultiWinnerSpin({
   winItems,
   visible,
   onClose,

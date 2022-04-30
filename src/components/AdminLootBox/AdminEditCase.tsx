@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { useState } from "react";
 import { ModalAdminAddDetail } from "../common/Modals/ModalAdminAddDetail";
 import { useAdminGetOneBoxLoot } from "../../hooks/useAdminGetOneBoxLoot";
-import { CustomLoader } from "../common/Loader";
+import CustomLoader from "../common/Loader";
 import { useAdminPutManipylationDetail } from "../../hooks/useAdminPutManipylationDetail";
 import {
   formDataType,
@@ -11,12 +11,12 @@ import {
 } from "../../hooks/useAdminPostUploadBoxImg";
 import { imageRoute } from "../../utils/api";
 import Modal from "../common/Modal";
-import { TedButton } from "../common/Button/TedButton";
+import TedButton from "../common/Button/TedButton";
 import { useAdminGetAllImageLootBoxes } from "../../hooks/useAdminGetAllImageLootBoxes";
 import { useAdminPutAddImageLootBox } from "../../hooks/useAdminPutAddImageLootBox";
 import { checkImageSrc } from "../../utils/commonFunctions";
 
-export const AdminEditCase = () => {
+const AdminEditCase = () => {
   const [files, setFiles] = useState<[] | formDataType>([]);
   const { data: galleryLootBox, isLoading } = useAdminGetAllImageLootBoxes();
 
@@ -219,6 +219,8 @@ export const AdminEditCase = () => {
     </AdminContentWrapper>
   );
 };
+
+export default AdminEditCase;
 
 const BackBtn = styled.div`
   color: white;

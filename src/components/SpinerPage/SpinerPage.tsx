@@ -4,9 +4,9 @@ import backspinner from "../../assets/img/backSpinner.svg";
 import arrow from "../../assets/img/arrowBackSpinner.svg";
 import { ReactComponent as Star } from "../../assets/img/starSpinnerBG.svg";
 import smallDiamond from "../../assets/img/smallDiamond.svg";
-import { TedButton } from "../common/Button/TedButton";
-import { MultiBtn } from "../common/Button/MultiBtn";
-import { SpinnerItem } from "../common/SpinnerItem";
+import TedButton from "../common/Button/TedButton";
+import MultiBtn from "../common/Button/MultiBtn";
+import SpinnerItem from "../common/SpinnerItem";
 import { useEffect, useState } from "react";
 import { useHistory, useParams } from "react-router-dom";
 import { useAdminGetOneBoxLoot } from "../../hooks/useAdminGetOneBoxLoot";
@@ -14,9 +14,9 @@ import { Roullete } from "./Roullete";
 import { checkImageSrc, checkTier } from "../../utils/commonFunctions";
 import { imageRoute } from "../../utils/api";
 import { usePostSpinLootBox } from "../../hooks/usePostSpinLootBox";
-import { CustomLoader } from "../common/Loader";
-import { ModalWinnerSpin } from "../common/Modals/ModalWinnerSpin";
-import { ModalMultiWinnerSpin } from "../common/Modals/ModalMultiWinnerSpin";
+import CustomLoader from "../common/Loader";
+import ModalWinnerSpin from "../common/Modals/ModalWinnerSpin";
+import ModalMultiWinnerSpin from "../common/Modals/ModalMultiWinnerSpin";
 
 type SpinerPropsType = {
   balance: number;

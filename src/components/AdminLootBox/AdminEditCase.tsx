@@ -10,7 +10,7 @@ import {
   useAdminPostUploadBoxImg,
 } from "../../hooks/useAdminPostUploadBoxImg";
 import { imageRoute } from "../../utils/api";
-import { Modal } from "../common/Modal";
+import Modal from "../common/Modal";
 import { TedButton } from "../common/Button/TedButton";
 import { useAdminGetAllImageLootBoxes } from "../../hooks/useAdminGetAllImageLootBoxes";
 import { useAdminPutAddImageLootBox } from "../../hooks/useAdminPutAddImageLootBox";

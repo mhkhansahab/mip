@@ -1,4 +1,4 @@
-import { Modal } from "../Modal";
+import Modal from "../Modal";
 import styled from "styled-components";
 import borderMarket from "../../../assets/img/borderMarketItem.svg";
 import { ReactComponent as CircleIcon } from "../../../assets/img/modalBGItemSpin.svg";

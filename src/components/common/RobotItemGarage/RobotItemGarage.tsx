@@ -6,7 +6,7 @@ import { imageRoute } from "../../../utils/api";
 import borderMarket from "../../../assets/img/borderMarketItem.svg";
 import { ReactComponent as CircleIcon } from "../../../assets/img/ellipseMarket.svg";
 import { TedButton } from "../Button/TedButton";
-import { Modal } from "../Modal";
+import Modal from "../Modal";
 import diamond from "../../../assets/img/smallDiamond.svg";
 import { useGetSellDetails } from "../../../hooks/useGetSellDetails";
 

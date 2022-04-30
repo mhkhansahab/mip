@@ -42,7 +42,7 @@ const garageTabs = [
   },
 ];
 
-export const ProfileBonuses = (props: ProfileBonusesPropsType) => {
+const ProfileBonuses = (props: ProfileBonusesPropsType) => {
   const history = useHistory();
 
   const handleLogout = () => {
@@ -279,6 +279,8 @@ export const ProfileBonuses = (props: ProfileBonusesPropsType) => {
     </ProfileBonusesContainer>
   );
 };
+
+export default ProfileBonuses;
 
 const SliderWrapp = styled(Slider)`
   display: flex;

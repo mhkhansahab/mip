@@ -6,7 +6,7 @@ import { CustomLoader } from "../common/Loader";
 import { useAdminPostAllLootBoxes } from "../../hooks/useAdminPostAllLootBoxes";
 import { useAdminDeleteLootBox } from "../../hooks/useAdminDeleteLootBox";
 import { ModalAdminEditLooBox } from "../common/Modals/ModalAdminEditLooBox";
-import { Modal } from "../common/Modal";
+import Modal from "../common/Modal";
 import smallDiamond from "../../assets/img/smallDiamond.svg";
 import { imageRoute } from "../../utils/api";
 import { Pagination } from "../common/Pagination";

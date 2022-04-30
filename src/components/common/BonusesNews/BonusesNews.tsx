@@ -3,7 +3,7 @@ import styled from "styled-components";
 import bookItem from "../../../assets/img/bonusesBookItem.svg";
 import gameItem from "../../../assets/img/bonusesGameIcon.svg";
 import userItem from "../../../assets/img/bonusesUserIcon.svg";
-import { Modal } from "../Modal";
+import Modal from "../Modal";
 
 type PropsNewsType = {
   title: string;

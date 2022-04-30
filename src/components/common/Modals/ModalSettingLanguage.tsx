@@ -1,4 +1,4 @@
-import { Modal } from "../Modal";
+import Modal from "../Modal";
 import styled from "styled-components";
 import { Formik } from "formik";
 import rusImg from "../../../assets/img/russia.png";
@@ -41,7 +41,7 @@ const SingleValue = (props: any) => (
   </CustomOption>
 );
 
-export function ModalSettingLanguage({
+export default function ModalSettingLanguage({
   anim,
   sound,
   visible,

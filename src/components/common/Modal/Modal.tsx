@@ -25,6 +25,8 @@ export const Modal = (props: ModalPropsType) => {
   );
 };
 
+export default Modal;
+
 const ModalWrapper = styled.div<{
   visible: boolean;
 }>`

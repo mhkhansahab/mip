@@ -12,7 +12,7 @@ type SeasonpassPropsType = {
   profile: ProfileUserInfo;
 };
 
-export const PassBonuses = (props: SeasonpassPropsType) => {
+const PassBonuses = (props: SeasonpassPropsType) => {
   const history = useHistory();
   const needExp = 100;
 
@@ -142,6 +142,8 @@ export const PassBonuses = (props: SeasonpassPropsType) => {
     </MainContainer>
   );
 };
+
+export default PassBonuses;
 
 const Diamonds = styled.div`
   margin-right: 8px;

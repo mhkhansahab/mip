@@ -3,7 +3,7 @@ import { useParams } from "react-router-dom";
 import styled from "styled-components";
 import { imageRoute } from "../../utils/api";
 import { CustomLoader } from "../common/Loader";
-import { Modal } from "../common/Modal";
+import Modal from "../common/Modal";
 import {
   checkImageSrc,
   checkTier,

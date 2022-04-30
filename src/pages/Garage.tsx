@@ -19,7 +19,7 @@ import Select from "react-select";
 import { useGetParamsForDetailsFilter } from "../hooks/useGetParamsForDetailsFilter";
 import { ReactComponent as SearchIcon } from "../assets/img/search.svg";
 import { checkImageSrc, checkSingleParamInSparePart, checkTier, customStylesForGarageSelect } from "../utils/commonFunctions";
-import { Modal } from "../components/common/Modal";
+import Modal from "../components/common/Modal";
 import { useMoveRobotToGarage } from "../hooks/useMoveRobotToGarage";
 import diamond from "../assets/img/smallDiamond.svg";
 import { useGetSellDetails } from "../hooks/useGetSellDetails";

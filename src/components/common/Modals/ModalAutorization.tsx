@@ -1,4 +1,4 @@
-import { Modal } from "../Modal";
+import Modal from "../Modal";
 import styled from "styled-components";
 import { TedButton } from "../Button/TedButton";
 
@@ -7,7 +7,7 @@ type PropsTypeWinSpin = {
   onClose: () => void;
 };
 
-export function ModalAutorization({ visible, onClose }: PropsTypeWinSpin) {
+export default function ModalAutorization({ visible, onClose }: PropsTypeWinSpin) {
   return (
     <ModalWrapper visible={visible} onClose={() => onClose()}>
       <ModalContent>
@@ -24,7 +24,7 @@ export function ModalAutorization({ visible, onClose }: PropsTypeWinSpin) {
           <p>Forgot your password?</p>
         </ItemModal>
         <ModalButton>
-          <TedButton size="modal" width="338" color="green" onclick={() => {}}>
+          <TedButton size="modal" width="338" color="green" onclick={() => { }}>
             Save
           </TedButton>
           <TextButtonModal>

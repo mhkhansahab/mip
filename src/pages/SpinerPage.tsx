@@ -24,7 +24,7 @@ type SpinerPropsType = {
   spins: ProfileUserSpins[];
 };
 
-export const Spiner = (props: SpinerPropsType) => {
+const Spiner = (props: SpinerPropsType) => {
   const params = useParams<{ pageNumber: string }>();
   const history = useHistory();
 
@@ -221,6 +221,8 @@ export const Spiner = (props: SpinerPropsType) => {
     </>
   );
 };
+
+export default Spiner;
 
 const SpinnerItems = styled.div`
   margin: 20px 0 0 30px;

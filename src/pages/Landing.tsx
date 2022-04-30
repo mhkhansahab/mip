@@ -13,7 +13,7 @@ import { TimerLanding } from "../components/common/TimerLanding/TimerLanding";
 import { LandingItem } from "../components/LandingItem";
 import { Dispatch, SetStateAction, useState } from "react";
 import { MetaMaskAuth } from "../components/MetaMaskAuth";
-import { Modal } from "../components/common/Modal";
+import Modal from "../components/common/Modal";
 import { LandingItemGallery } from "../components/LandingItemGallery";
 import { ReactComponent as galleryArrowLeft } from "../assets/img/LandingArrowGallery.svg";
 import { ReactComponent as galleryArrowRight } from "../assets/img/LandingArrowGallery.svg";

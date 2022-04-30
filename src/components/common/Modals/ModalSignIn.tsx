@@ -1,4 +1,4 @@
-import { Modal } from "../Modal";
+import Modal from "../Modal";
 import styled from "styled-components";
 import { TedButton } from "../Button/TedButton";
 
@@ -7,7 +7,7 @@ type PropsTypeWinSpin = {
   onClose: () => void;
 };
 
-export function ModalSignIn({ visible, onClose }: PropsTypeWinSpin) {
+export default function ModalSignIn({ visible, onClose }: PropsTypeWinSpin) {
   return (
     <ModalWrapper visible={visible} onClose={() => onClose()}>
       <ModalContent>
@@ -31,7 +31,7 @@ export function ModalSignIn({ visible, onClose }: PropsTypeWinSpin) {
           </InputWrapperModalToken>
         </ItemModal>
         <ModalButton>
-          <TedButton size="modal" width="338" color="green" onclick={() => {}}>
+          <TedButton size="modal" width="338" color="green" onclick={() => { }}>
             Login
           </TedButton>
           <p>I already have an account</p>

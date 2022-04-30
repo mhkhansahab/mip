@@ -1,4 +1,4 @@
-import { Modal } from "../Modal";
+import Modal from "../Modal";
 import styled from "styled-components";
 import { TedButton } from "../Button/TedButton";
 import { Formik } from "formik";
@@ -9,7 +9,7 @@ type PropsTypeWinSpin = {
   onClose: () => void;
 };
 
-export function ModalNewPassword({ visible, onClose }: PropsTypeWinSpin) {
+export default function ModalNewPassword({ visible, onClose }: PropsTypeWinSpin) {
   return (
     <ModalWrapper visible={visible} onClose={() => onClose()}>
       <ModalContent>

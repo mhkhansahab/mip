@@ -1,23 +1,22 @@
 import { useEffect, useState, lazy, Suspense } from "react";
 import { Route, Switch, useLocation } from "react-router-dom";
 import styled from "styled-components";
+import loadable from '@loadable/component';
 import { useGetProfile } from "../../../hooks/useGetProfile";
 import { Context } from "../../../utils/commonFunctions";
 import { Footer } from "../../Footer";
 import { LeftMenu, TopMenu } from "../../Menu";
-import { PassBonuses } from "../../../pages/PassBonuses";
-import { ProfileBonuses } from "../../../pages/ProfileBonuses";
-import { Spiner } from "../../../pages/SpinerPage";
-import { Modal } from "../Modal";
-import { ModalAutorization } from "../Modals/ModalAutorization";
-import { ModalForgetPassword } from "../Modals/ModalForgetPassword";
-import { ModalNewPassword } from "../Modals/ModalNewPassword";
-import { ModalProfileSettings } from "../Modals/ModalProfileSettings";
-import { ModalSendTokens } from "../Modals/ModalSendTokens";
-import { ModalSettingLanguage } from "../Modals/ModalSettingLanguage";
-import { ModalSignIn } from "../Modals/ModalSignIn";
 import { SnackBar } from "../SnackBar";
 import { CustomLoader } from "../Loader";
+
+const Modal = loadable(() => import('../Modal'));
+const ModalAutorization = loadable(() => import('../Modals/ModalAutorization'));
+const ModalForgetPassword = loadable(() => import('../Modals/ModalForgetPassword'));
+const ModalNewPassword = loadable(() => import('../Modals/ModalNewPassword'));
+const ModalProfileSettings = loadable(() => import('../Modals/ModalProfileSettings'));
+const ModalSendTokens = loadable(() => import('../Modals/ModalSendTokens'));
+const ModalSettingLanguage = loadable(() => import('../Modals/ModalSettingLanguage'));
+const ModalSignIn = loadable(() => import('../Modals/ModalSignIn'));
 
 const AdminPage = lazy(() => import('../../../pages/Admin'));
 const Faq = lazy(() => import('../../../pages/Faq'));
@@ -27,6 +26,19 @@ const Loot = lazy(() => import('../../../pages/Loot'));
 const Market = lazy(() => import('../../../pages/Market'));
 const Seasonpass = lazy(() => import('../../../pages/Seasonpass'));
 const Top = lazy(() => import('../../../pages/Top'));
+const PassBonuses = lazy(() => import('../../../pages/PassBonuses'));
+const ProfileBonuses = lazy(() => import('../../../pages/ProfileBonuses'));
+const Spiner = lazy(() => import('../../../pages/SpinerPage'));
+
+// import Modal from "../Modal";
+// import { ModalAutorization } from "../Modals/ModalAutorization";
+// import { ModalForgetPassword } from "../Modals/ModalForgetPassword";
+// import { ModalNewPassword } from "../Modals/ModalNewPassword";
+// import { ModalProfileSettings } from "../Modals/ModalProfileSettings";
+// import { ModalSendTokens } from "../Modals/ModalSendTokens";
+// import { ModalSettingLanguage } from "../Modals/ModalSettingLanguage";
+// import { ModalSignIn } from "../Modals/ModalSignIn";
+
 
 export const PageWrapper = () => {
   const [isAuth, setIsAuth] = useState<boolean>(false);
@@ -183,7 +195,7 @@ export const PageWrapper = () => {
                     )} />
                     <Route path={"/top"} render={() => (
                       <Suspense fallback={<LoadingScreen> <CustomLoader margin="20px 0 0 30px;" /></LoadingScreen>}>
-                        <Top/>
+                        <Top />
                       </Suspense>
                     )} />
                   </PageContent>

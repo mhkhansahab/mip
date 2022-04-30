@@ -5,7 +5,7 @@ import validateImg from "../../assets/img/validate.png";
 import closeImg from "../../assets/img/close.png";
 import { useUploadFileAdmin } from "../../hooks/useUploadFileAdmin";
 import { CustomLoader } from "../common/Loader";
-import { Modal } from "../common/Modal";
+import Modal from "../common/Modal";
 
 export type CustomFileList = {
   lastModified: number;

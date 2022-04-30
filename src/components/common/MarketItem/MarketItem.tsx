@@ -4,7 +4,7 @@ import borderMarket from "../../../assets/img/borderMarketItem.svg";
 import { ReactComponent as CircleIcon } from "../../../assets/img/ellipseMarket.svg";
 import { TedButton } from "../Button/TedButton";
 import { Tier } from "../Tier";
-import { Modal } from "../Modal";
+import Modal from "../Modal";
 import { useState } from "react";
 import diamond from "../../../assets/img/smallDiamond.svg";
 import { useGetBuyDetails } from "../../../hooks/useGetBuyDetails";

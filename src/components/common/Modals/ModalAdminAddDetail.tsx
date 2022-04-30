@@ -1,4 +1,4 @@
-import { Modal } from "../Modal";
+import Modal from "../Modal";
 import styled from "styled-components";
 import { TedButton } from "../Button/TedButton";
 import { Formik } from "formik";

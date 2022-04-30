@@ -18,7 +18,7 @@ type SeasonpassPropsType = {
   tickets: TicketPayType[];
 };
 
-export const Seasonpass = (props: SeasonpassPropsType) => {
+const Seasonpass = (props: SeasonpassPropsType) => {
   const handlePayTicket = (ticketId: number) => {
     connect().then(() => {
       ticketPay(ticketId);
@@ -123,6 +123,8 @@ export const Seasonpass = (props: SeasonpassPropsType) => {
     </MainContainer>
   );
 };
+
+export default Seasonpass;
 
 const ButtonWrapper = styled.div`
   display: flex;

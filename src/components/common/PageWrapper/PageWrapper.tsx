@@ -1,15 +1,7 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, lazy, Suspense } from "react";
 import { Route, Switch, useLocation } from "react-router-dom";
 import styled from "styled-components";
 import { useGetProfile } from "../../../hooks/useGetProfile";
-import { AdminPage } from "../../../pages/Admin";
-import { Faq } from "../../../pages/Faq";
-import { Garage } from "../../../pages/Garage";
-import { Landing } from "../../../pages/Landing";
-import { Loot } from "../../../pages/Loot";
-import { Market } from "../../../pages/Market";
-import { Seasonpass } from "../../../pages/Seasonpass";
-import { Top } from "../../../pages/Top";
 import { Context } from "../../../utils/commonFunctions";
 import { Footer } from "../../Footer";
 import { LeftMenu, TopMenu } from "../../Menu";
@@ -25,6 +17,16 @@ import { ModalSendTokens } from "../Modals/ModalSendTokens";
 import { ModalSettingLanguage } from "../Modals/ModalSettingLanguage";
 import { ModalSignIn } from "../Modals/ModalSignIn";
 import { SnackBar } from "../SnackBar";
+import { CustomLoader } from "../Loader";
+
+const AdminPage = lazy(() => import('../../../pages/Admin'));
+const Faq = lazy(() => import('../../../pages/Faq'));
+const Garage = lazy(() => import('../../../pages/Garage'));
+const Landing = lazy(() => import('../../../pages/Landing'));
+const Loot = lazy(() => import('../../../pages/Loot'));
+const Market = lazy(() => import('../../../pages/Market'));
+const Seasonpass = lazy(() => import('../../../pages/Seasonpass'));
+const Top = lazy(() => import('../../../pages/Top'));
 
 export const PageWrapper = () => {
   const [isAuth, setIsAuth] = useState<boolean>(false);
@@ -59,7 +61,9 @@ export const PageWrapper = () => {
       <Page>
         <Context.Provider value={{ setMessage }}>
           {!isAuth || !data?.data ? (
-            <Landing setAuth={setIsAuth} />
+            <Suspense fallback={<LoadingScreen> <CustomLoader margin="20px 0 0 30px;" /></LoadingScreen>}>
+              <Landing setAuth={setIsAuth} />
+            </Suspense>
           ) : (
             <>
               <Route path={"/admin"} component={AdminPage} />
@@ -75,12 +79,12 @@ export const PageWrapper = () => {
                     }
                     usedFreeBox={
                       data.data.spins.length &&
-                      data.data.spins.filter(
-                        item => item.lootbox.type === "free",
-                      ).length
+                        data.data.spins.filter(
+                          item => item.lootbox.type === "free",
+                        ).length
                         ? !data.data.spins.filter(
-                            item => item.lootbox.type === "free",
-                          )[0].is_used
+                          item => item.lootbox.type === "free",
+                        )[0].is_used
                         : false
                     }
                   />
@@ -90,78 +94,98 @@ export const PageWrapper = () => {
                       exact
                       path={"/"}
                       render={() => (
-                        <ProfileBonuses
-                          profile={data.data.userInfo}
-                          isOpen={() => setVisibleSettingsLanguage(true)}
-                        />
+                        <Suspense fallback={<LoadingScreen> <CustomLoader margin="20px 0 0 30px;" /></LoadingScreen>}>
+                          <ProfileBonuses
+                            profile={data.data.userInfo}
+                            isOpen={() => setVisibleSettingsLanguage(true)}
+                          />
+                        </Suspense>
                       )}
                     />
                     <Route
                       path={"/garage/:garagePageNumber"}
                       render={() => (
-                        <Garage
-                          garageCount={data?.data.userInfo.garage_count}
-                          wallet={data?.data.userInfo.wallet}
-                        />
+                        <Suspense fallback={<LoadingScreen> <CustomLoader margin="20px 0 0 30px;" /></LoadingScreen>}>
+                          <Garage
+                            garageCount={data?.data.userInfo.garage_count}
+                            wallet={data?.data.userInfo.wallet}
+                          />
+                        </Suspense>
                       )}
                     />
                     <Route
                       path={"/loot/:pageNumber"}
                       render={() => (
-                        <Spiner
-                          balance={data?.data.userInfo.balance || 0}
-                          spins={data.data.spins}
-                        />
+                        <Suspense fallback={<LoadingScreen> <CustomLoader margin="20px 0 0 30px;" /></LoadingScreen>}>
+                          <Spiner
+                            balance={data?.data.userInfo.balance || 0}
+                            spins={data.data.spins}
+                          />
+                        </Suspense>
                       )}
                     />
                     <Route
                       exact
                       path={"/loot"}
                       render={() => (
-                        <Loot
-                          balance={data?.data.userInfo.balance || 0}
-                          countCase={
-                            data.data.spins ? data.data.spins.length : 0
-                          }
-                          freeBox={data.data.spins}
-                        />
+                        <Suspense fallback={<LoadingScreen> <CustomLoader margin="20px 0 0 30px;" /></LoadingScreen>}>
+                          <Loot
+                            balance={data?.data.userInfo.balance || 0}
+                            countCase={
+                              data.data.spins ? data.data.spins.length : 0
+                            }
+                            freeBox={data.data.spins}
+                          />
+                        </Suspense>
                       )}
                     />
                     <Route
                       path={"/market/:marketPageNumber"}
                       render={() => (
-                        <Market
-                          balance={data?.data.userInfo.balance || 0}
-                          countCase={
-                            data.data.spins
-                              ? data.data.spins.filter(i => i.is_used === 0)
+                        <Suspense fallback={<LoadingScreen> <CustomLoader margin="20px 0 0 30px;" /></LoadingScreen>}>
+                          <Market
+                            balance={data?.data.userInfo.balance || 0}
+                            countCase={
+                              data.data.spins
+                                ? data.data.spins.filter(i => i.is_used === 0)
                                   .length
-                              : 0
-                          }
-                        />
+                                : 0
+                            }
+                          />
+                        </Suspense>
                       )}
                     />
                     <Route
                       exact
                       path={"/seasonpass"}
                       render={() => (
-                        //<Seasonpass lvl={(data && +data.data.level) || 0} />
-                        <Seasonpass
-                          lvl={2}
-                          tickets={data.data.userInfo.tickets}
-                        />
+                        <Suspense fallback={<LoadingScreen> <CustomLoader margin="20px 0 0 30px;" /></LoadingScreen>}>
+                          <Seasonpass
+                            lvl={2}
+                            tickets={data.data.userInfo.tickets}
+                          />
+                        </Suspense>
                       )}
                     />
                     <Route
                       exact
                       path={"/progress"}
                       render={() => (
-                        //<PassBonuses lvl={(data && +data.data.level) || 0} />
-                        <PassBonuses profile={data.data.userInfo} />
+                        <Suspense fallback={<LoadingScreen> <CustomLoader margin="20px 0 0 30px;" /></LoadingScreen>}>
+                          <PassBonuses profile={data.data.userInfo} />
+                        </Suspense>
                       )}
                     />
-                    <Route path={"/faq"} component={Faq} />
-                    <Route path={"/top"} component={Top} />
+                    <Route path={"/faq"} render={() => (
+                      <Suspense fallback={<LoadingScreen> <CustomLoader margin="20px 0 0 30px;" /></LoadingScreen>}>
+                        <Faq />
+                      </Suspense>
+                    )} />
+                    <Route path={"/top"} render={() => (
+                      <Suspense fallback={<LoadingScreen> <CustomLoader margin="20px 0 0 30px;" /></LoadingScreen>}>
+                        <Top/>
+                      </Suspense>
+                    )} />
                   </PageContent>
                   <Footer />
                 </>
@@ -274,4 +298,13 @@ const PageContent = styled.div`
     margin-left: 0;
     width: 100%;
   }
+`;
+
+const LoadingScreen = styled.div`
+height: 100vh;
+width: 100%;
+background: #050b1c;
+display: flex;
+justify-content: center;
+align-items: center;
 `;

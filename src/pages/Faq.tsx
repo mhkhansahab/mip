@@ -39,7 +39,7 @@ const faqTabs = [
   },
 ];
 
-export const Faq = (props: FaqPropsType) => {
+const Faq = (props: FaqPropsType) => {
   const [activeTab, setActiveTab] = useState<string>(faqTabs[0].value);
   const [activeSection, setActiveSetcion] = useState<number | null>(null);
 
@@ -93,6 +93,8 @@ export const Faq = (props: FaqPropsType) => {
     </FaqContainer>
   );
 };
+
+export default Faq;
 
 const Accordion = styled.div``;
 

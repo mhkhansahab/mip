@@ -25,7 +25,7 @@ const topTabs = [
   },
 ];
 
-export const Top = (props: TopPropsType) => {
+const Top = (props: TopPropsType) => {
   const [activeTab, setActiveTab] = useState<string>("All time");
 
   const handleClick = (newTab: string) => {
@@ -61,6 +61,8 @@ export const Top = (props: TopPropsType) => {
     </TopContainer>
   );
 };
+
+export default Top;
 
 const TopContainer = styled.div`
   color: #fff;

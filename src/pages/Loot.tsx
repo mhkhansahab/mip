@@ -77,7 +77,7 @@ const rarityTabs = [
   },
 ];
 
-export const Loot = (props: LootPropsType) => {
+const Loot = (props: LootPropsType) => {
   const [activeTab, setActiveTab] = useState<string>("1-9 MIP");
   const [min, setMin] = useState<number>(1);
   const [max, setMax] = useState<number>(9);
@@ -175,6 +175,8 @@ export const Loot = (props: LootPropsType) => {
     </LootContainer>
   );
 };
+
+export default Loot;
 
 const MessageNoItem = styled.div`
   width: 500px;

@@ -54,6 +54,7 @@ async function connect(onConnected: any) {
     method: "eth_requestAccounts",
   });
 
+  console.log(accounts)
   onConnected(accounts[0]);
 }
 

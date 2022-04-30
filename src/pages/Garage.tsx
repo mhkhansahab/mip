@@ -32,7 +32,7 @@ type GaragePropsType = {
   wallet: string;
 };
 
-export const Garage = (props: GaragePropsType) => {
+const Garage = (props: GaragePropsType) => {
   const params = useParams<{ garagePageNumber: string }>();
   const { data: _robots, isLoading: isGetRobotsLoading } = useGetAllRobotsInProfile();
   const { mutate: refreshNFT } = useGetRefreshNFT();
@@ -542,6 +542,8 @@ export const Garage = (props: GaragePropsType) => {
     </GarageContainer>
   );
 };
+
+export default Garage;
 
 const NoItemTitle = styled.div``;
 

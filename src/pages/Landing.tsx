@@ -62,7 +62,7 @@ type LandingProps = {
   setAuth: Dispatch<SetStateAction<boolean>>;
 };
 
-export function Landing(props: LandingProps) {
+const Landing = (props: LandingProps) => {
   const [isMetaOpen, setIsMetaOpen] = useState<boolean>(false);
   const [modalMenuVisible, setModalMenuVisible] = useState<boolean>(false);
 
@@ -463,7 +463,7 @@ export function Landing(props: LandingProps) {
         <RoadMapContent>
           <RoadItemsWrapper>
             <RoadMapItem>
-              <img src={roadMap1} loading="lazy"  alt="" />
+              <img src={roadMap1} loading="lazy" alt="" />
             </RoadMapItem>
             <CircleStyled />
             <RoadMapText>
@@ -489,7 +489,7 @@ export function Landing(props: LandingProps) {
               </p>
             </RoadMapText>
             <RoadMapItem>
-              <img src={roadMap2} loading="lazy"  alt="" />
+              <img src={roadMap2} loading="lazy" alt="" />
             </RoadMapItem>
             <CircleStyled />
           </RoadItemsWrapper>
@@ -521,13 +521,13 @@ export function Landing(props: LandingProps) {
               </p>
             </RoadMapText>
             <RoadMapItem>
-              <img src={roadMap4} loading="lazy"  alt="" />
+              <img src={roadMap4} loading="lazy" alt="" />
             </RoadMapItem>
             <CircleStyled />
           </RoadItemsWrapper>
           <RoadItemsWrapper>
             <RoadMapItem>
-              <img src={roadMap5} loading="lazy"  alt="" />
+              <img src={roadMap5} loading="lazy" alt="" />
             </RoadMapItem>
             <CircleStyled />
             <RoadMapText>
@@ -553,7 +553,7 @@ export function Landing(props: LandingProps) {
               </p>
             </RoadMapText>
             <RoadMapItem>
-              <img src={roadMap6} loading="lazy"  alt="" />
+              <img src={roadMap6} loading="lazy" alt="" />
             </RoadMapItem>
             <CircleStyled />
           </RoadItemsWrapper>
@@ -603,6 +603,8 @@ export function Landing(props: LandingProps) {
     </LandingPage>
   );
 }
+
+export default Landing;
 
 const ItemsPass = styled.div`
   display: flex;

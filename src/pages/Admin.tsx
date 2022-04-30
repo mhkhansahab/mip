@@ -20,7 +20,7 @@ export const linkPages: adminLinkPagesType[] = [
   { title: "market", path: "/admin/market/1" },
 ];
 
-export const AdminPage = () => {
+const AdminPage = () => {
   const location = useLocation();
   const history = useHistory();
   useEffect(() => {
@@ -63,6 +63,8 @@ export const AdminPage = () => {
     </AdminPageWrapper>
   );
 };
+
+export default AdminPage;
 
 const AdminPageWrapper = styled.div``;
 

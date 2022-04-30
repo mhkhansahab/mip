@@ -94,7 +94,7 @@ const rarityTabs = [
   },
 ];
 
-export const Market = (props: MarketPropsType) => {
+const Market = (props: MarketPropsType) => {
   const params = useParams<{ marketPageNumber: string }>();
 
   const [activeTab, setActiveTab] = useState<string>("All");
@@ -261,6 +261,8 @@ export const Market = (props: MarketPropsType) => {
     </MarketContainer>
   );
 };
+
+export default Market;
 
 const NoItemTitle = styled.div``;
 

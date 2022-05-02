@@ -2,6 +2,7 @@ import { Dispatch, SetStateAction, useState } from "react";
 import styled from "styled-components";
 import loadable from '@loadable/component';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
+import 'react-lazy-load-image-component/src/effects/blur.css';
 import { ReactComponent as iconSea } from "../assets/img/landingOpenSea.svg";
 import { ReactComponent as iconTwitter } from "../assets/img/landingTwitter.svg";
 import { ReactComponent as iconDiscord } from "../assets/img/landingDiscord.svg";

@@ -2,12 +2,12 @@ import Modal from "../Modal";
 import styled from "styled-components";
 import borderMarket from "../../../assets/img/borderMarketItem.svg";
 import { ReactComponent as CircleIcon } from "../../../assets/img/modalBGItemSpin.svg";
-import { ReactComponent as ArrowRight } from "../../../assets/img/bonusesArrow.svg";
+// import { ReactComponent as ArrowRight } from "../../../assets/img/bonusesArrow.svg";
 import Slider from "react-slick";
 import { AdminPartsType } from "../../../utils/commonTypes";
 import { imageRoute } from "../../../utils/api";
 import { checkImageSrc, checkTier } from "../../../utils/commonFunctions";
-import { useHistory } from "react-router-dom";
+// import { useHistory } from "react-router-dom";
 import {
   SlickArrowLeftProfile,
   SlickArrowRightProfile,
@@ -26,7 +26,7 @@ export default function ModalMultiWinnerSpin({
   onClose,
   freeType,
 }: PropsTypeWinSpin) {
-  const history = useHistory();
+  // const history = useHistory();
 
   const settings = {
     infinite: false,
@@ -35,10 +35,10 @@ export default function ModalMultiWinnerSpin({
     slidesToShow: 1,
   };
 
-  const closeModal = () => {
-    onClose();
-    freeType && history.push("/loot");
-  };
+  // const closeModal = () => {
+  //   onClose();
+  //   freeType && history.push("/loot");
+  // };
 
   const afterChangeHandler = (currentslide: number) => {
     //setActiveElForSeil(winItems[currentSlide]);
@@ -127,73 +127,73 @@ export default function ModalMultiWinnerSpin({
   );
 }
 
-const BtnBack = styled(ArrowRight)`
-  fill: #fff;
-`;
+// const BtnBack = styled(ArrowRight)`
+//   fill: #fff;
+// `;
 
-const BtnPrev = styled(ArrowRight)`
-  fill: #fff;
-`;
+// const BtnPrev = styled(ArrowRight)`
+//   fill: #fff;
+// `;
 
-const SliderWrapper = styled.div`
-  position: relative;
-  display: flex;
-  width: 455px;
-  height: 408px;
-  border-radius: 12px;
-  background: #0e141a;
-  padding: 17px;
-  overflow: hidden;
+// const SliderWrapper = styled.div`
+//   position: relative;
+//   display: flex;
+//   width: 455px;
+//   height: 408px;
+//   border-radius: 12px;
+//   background: #0e141a;
+//   padding: 17px;
+//   overflow: hidden;
 
-  > div {
-    display: flex;
-    justify-content: center;
-    > div {
-      position: relative;
-      :last-child {
-        z-index: 3;
-        position: absolute;
-        top: 0;
-        left: 42px;
-        width: 400px;
-        height: 100%;
-      }
-      > div {
-        > div {
-          display: flex;
-          width: 100% !important;
-        }
-      }
-    }
-  }
-`;
+//   > div {
+//     display: flex;
+//     justify-content: center;
+//     > div {
+//       position: relative;
+//       :last-child {
+//         z-index: 3;
+//         position: absolute;
+//         top: 0;
+//         left: 42px;
+//         width: 400px;
+//         height: 100%;
+//       }
+//       > div {
+//         > div {
+//           display: flex;
+//           width: 100% !important;
+//         }
+//       }
+//     }
+//   }
+// `;
 
-const BtnWrapp = styled.div`
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  > button {
-    background: none;
-    border: none;
-    width: 70px;
-    height: 50%;
-    :hover {
-      cursor: pointer;
-    }
-  }
-  > button:first-child {
-    transform: matrix(-1, 0, 0, 1, 0, 0);
-  }
-`;
+// const BtnWrapp = styled.div`
+//   display: flex;
+//   justify-content: space-between;
+//   align-items: center;
+//   > button {
+//     background: none;
+//     border: none;
+//     width: 70px;
+//     height: 50%;
+//     :hover {
+//       cursor: pointer;
+//     }
+//   }
+//   > button:first-child {
+//     transform: matrix(-1, 0, 0, 1, 0, 0);
+//   }
+// `;
 
-const ModalButton = styled.div`
-  display: flex;
-  margin-bottom: 23px;
+// const ModalButton = styled.div`
+//   display: flex;
+//   margin-bottom: 23px;
 
-  > div {
-    margin: 0 6px;
-  }
-`;
+//   > div {
+//     margin: 0 6px;
+//   }
+// `;
 
 const CircleIconStyled = styled(CircleIcon)`
   fill: #29efa8;
@@ -249,26 +249,26 @@ const ItemModal = styled.div`
   }
 `;
 
-const ModalContent = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  overflow: hidden;
-  width: 408px;
-  height: 455px;
-  background: linear-gradient(45deg, #1f2933 3%, #0e141a 3%);
-  border-radius: 12px;
-  color: #ffffff;
-  text-align: center;
+// const ModalContent = styled.div`
+//   display: flex;
+//   flex-direction: column;
+//   align-items: center;
+//   overflow: hidden;
+//   width: 408px;
+//   height: 455px;
+//   background: linear-gradient(45deg, #1f2933 3%, #0e141a 3%);
+//   border-radius: 12px;
+//   color: #ffffff;
+//   text-align: center;
 
-  > h3 {
-    font-size: 24px;
-    line-height: 29px;
-    text-align: center;
-    margin-top: 32px;
-  }
+//   > h3 {
+//     font-size: 24px;
+//     line-height: 29px;
+//     text-align: center;
+//     margin-top: 32px;
+//   }
 
-  > img {
-    margin-top: 12px;
-  }
-`;
+//   > img {
+//     margin-top: 12px;
+//   }
+// `;

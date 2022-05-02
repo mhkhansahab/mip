@@ -4,6 +4,7 @@ import { useState } from "react";
 import Slider from "react-slick";
 import loadable from '@loadable/component';
 import { LazyLoadImage } from "react-lazy-load-image-component";
+import 'react-lazy-load-image-component/src/effects/blur.css';
 import { ReactComponent as ArrowRight } from "../assets/img/bonusesArrow.svg";
 import { ReactComponent as LogoutIcon } from "../assets/img/logout.svg";
 import { ReactComponent as BorderTop } from "../assets/img/bonusesBorderTop.svg";

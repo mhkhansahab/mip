@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { LazyLoadImage } from 'react-lazy-load-image-component';
+import 'react-lazy-load-image-component/src/effects/blur.css';
 import borderActiveItem from "../../assets/img/landingActiveBorderGallery.svg";
 import borderItem from "../../assets/img/landingBorderGallery.svg";
 import imgGalery from "../../assets/img/landingImgGallery.png";

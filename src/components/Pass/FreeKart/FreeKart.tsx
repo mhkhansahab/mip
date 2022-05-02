@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { LazyLoadImage } from "react-lazy-load-image-component";
+import 'react-lazy-load-image-component/src/effects/blur.css';
 import kartFree from "../../../assets/img/kartPassFree.png";
 import { MipKart } from "./MipKart";
 import { RobotKart } from "./RobotKart";

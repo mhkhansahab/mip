@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { LazyLoadImage } from "react-lazy-load-image-component";
+import 'react-lazy-load-image-component/src/effects/blur.css';
 import { ReactComponent as ArrowHorizontItem } from "../../../assets/img/bonusesHorArrow.svg";
 import { ReactComponent as CaseImg } from "../../../assets/img/bonusesCaseItem.svg";
 import { ReactComponent as CircleIcon } from "../../../assets/img/ellipseMarket.svg";

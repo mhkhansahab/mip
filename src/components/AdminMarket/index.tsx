@@ -2,6 +2,7 @@ import { useState } from "react";
 import { useParams } from "react-router-dom";
 import styled from "styled-components";
 import { LazyLoadImage } from "react-lazy-load-image-component";
+import 'react-lazy-load-image-component/src/effects/blur.css';
 import { imageRoute } from "../../utils/api";
 import CustomLoader from "../common/Loader";
 import Modal from "../common/Modal";

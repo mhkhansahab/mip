@@ -1,6 +1,7 @@
 import { useState } from "react";
 import styled from "styled-components";
 import { LazyLoadImage } from "react-lazy-load-image-component";
+import 'react-lazy-load-image-component/src/effects/blur.css';
 import photo from "../../../assets/img/photo.png";
 import box from "../../../assets/img/smallBox.svg";
 import diamond from "../../../assets/img/smallDiamond.svg";

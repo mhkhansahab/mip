@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import loadable from '@loadable/component';
 import { LazyLoadImage } from "react-lazy-load-image-component";
+import 'react-lazy-load-image-component/src/effects/blur.css';
 import { connect, ticketPay } from "../metamask/balanceAndGaragePaidExample";
 import { ReactComponent as BgEffect2 } from "../assets/img/bgEffectPass2.svg";
 import { ReactComponent as BgEffect1 } from "../assets/img/bgEffectPass1.svg";

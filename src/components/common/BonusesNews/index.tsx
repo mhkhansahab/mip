@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import styled from "styled-components";
 import { LazyLoadImage } from "react-lazy-load-image-component";
+import 'react-lazy-load-image-component/src/effects/blur.css';
 import bookItem from "../../../assets/img/bonusesBookItem.svg";
 import gameItem from "../../../assets/img/bonusesGameIcon.svg";
 import userItem from "../../../assets/img/bonusesUserIcon.svg";

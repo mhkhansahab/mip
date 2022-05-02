@@ -1,6 +1,7 @@
 import { useState } from "react";
 import styled from "styled-components";
 import { LazyLoadImage } from 'react-lazy-load-image-component';
+import 'react-lazy-load-image-component/src/effects/blur.css';
 import { useValidateAdminImages } from "../../hooks/useValidateAdminImages";
 import validateImg from "../../assets/img/validate.png";
 import closeImg from "../../assets/img/close.png";

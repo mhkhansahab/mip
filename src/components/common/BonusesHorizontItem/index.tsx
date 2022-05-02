@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 import smallDiamond from "../../../assets/img/smallDiamond.svg";
 import arrowTop from "../../../assets/img/bonusesArrowTop.svg";
 import arrowBot from "../../../assets/img/bonusesArrowBot.svg";
@@ -26,7 +27,10 @@ const BonusesHorizontItem = (props: LootItemPropsType) => {
           <p>{props.descr}</p>
           <CristalCount status={props.status}>
             <span>{props.coin} MIP</span>
-            <img src={smallDiamond} alt="" />
+            <LazyLoadImage
+                        alt={''}
+                        effect="blur"
+                        src={smallDiamond} />
           </CristalCount>
           <Arrow status={props.status}>
             {props.status === "sell" && <img src={arrowTop} alt="" />}

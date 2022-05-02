@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 import { ReactComponent as ArrowHorizontItem } from "../../../assets/img/bonusesHorArrow.svg";
 import { ReactComponent as CaseImg } from "../../../assets/img/bonusesCaseItem.svg";
 import { ReactComponent as CircleIcon } from "../../../assets/img/ellipseMarket.svg";
@@ -17,7 +18,11 @@ export default function BonusesVerticalItem(props: PropsBonusesItemType) {
   return (
     <ItemWrapper>
       <DateItem>
-        <img src={dateIcon} alt="" />
+        <LazyLoadImage
+          alt={''}
+          effect="blur"
+          src={dateIcon} />
+
         21.02, 13:23
       </DateItem>
       <LootWrapper>
@@ -29,7 +34,10 @@ export default function BonusesVerticalItem(props: PropsBonusesItemType) {
           <CaseName>
             <div>{props.caseName}</div>
             <CristalCount>
-              <img src={smallDiamond} alt="" />
+              <LazyLoadImage
+                alt={''}
+                effect="blur"
+                src={smallDiamond} />
               <span>{props.caseCoin} MIP</span>
             </CristalCount>
           </CaseName>
@@ -50,7 +58,10 @@ export default function BonusesVerticalItem(props: PropsBonusesItemType) {
       </LootWrapper>
       <AddMIP>
         <p>+ {props.addCoin} </p>
-        <img src={smallDiamond} alt="" />
+        <LazyLoadImage
+          alt={''}
+          effect="blur"
+          src={smallDiamond} />
       </AddMIP>
     </ItemWrapper>
   );
@@ -62,7 +73,7 @@ const AddMIP = styled.div`
   color: #ffd63d;
   display: flex;
 
-  > img {
+  > span > img {
     margin-left: 9px;
   }
 `;
@@ -108,7 +119,7 @@ const DateItem = styled.div`
   line-height: 17px;
   color: #616d7a;
 
-  > img {
+  > span > img {
     height: 17px;
     margin: 0 6px -2px 0;
   }
@@ -159,7 +170,7 @@ const CristalCount = styled.div`
     color: #ffd63d;
   }
 
-  > img {
+  > span > img {
     margin: -1px 6px 0 0;
   }
 `;

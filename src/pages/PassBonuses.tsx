@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import loadable from '@loadable/component';
+import { LazyLoadImage } from "react-lazy-load-image-component";
 import { useHistory } from "react-router-dom";
 import diamond from "../assets/img/smallDiamond.svg";
 import garageHeaderBg from "../assets/img/backgroundGarage.png";
@@ -43,7 +44,10 @@ const PassBonuses = (props: SeasonpassPropsType) => {
                     <h1>
                       {+props.profile.balance_xp}/{needExp} exp
                     </h1>
-                    <img src={titleRobot} alt="" />
+                    <LazyLoadImage
+                      alt={''}
+                      effect="blur"
+                      src={titleRobot} />
                   </TitlePass>
                   <MainPass>
                     <NewPass lvl={+props.profile.level} type="free" />
@@ -78,7 +82,10 @@ const PassBonuses = (props: SeasonpassPropsType) => {
                 <h1>
                   {+props.profile.balance_xp}/{needExp} exp
                 </h1>
-                <img src={titleRobot} alt="" />
+                <LazyLoadImage
+                  alt={''}
+                  effect="blur"
+                  src={titleRobot} />
               </TitlePass>
               <MainPass>
                 <NewPass lvl={+props.profile.level} type="free" />
@@ -103,7 +110,10 @@ const PassBonuses = (props: SeasonpassPropsType) => {
               <h1>
                 {+props.profile.balance_xp}/{needExp} exp
               </h1>
-              <img src={titleRobot} alt="" />
+              <LazyLoadImage
+                alt={''}
+                effect="blur"
+                src={titleRobot} />
             </TitlePass>
             <MainPass>
               <NewPass lvl={+props.profile.level} type="prem" />
@@ -128,7 +138,10 @@ const PassBonuses = (props: SeasonpassPropsType) => {
               <p>Total bonus</p>
               <Diamonds>
                 <span>180 MIP</span>
-                <img src={diamond} alt="" />
+                <LazyLoadImage
+                  alt={''}
+                  effect="blur"
+                  src={diamond} />
               </Diamonds>
             </TotalCoins>
           </BonusesWrapper>
@@ -325,7 +338,7 @@ const TitlePass = styled.div`
     color: #616d7a;
   }
 
-  > img {
+  > span > img {
     margin-top: 10px;
     border-radius: 12px;
   }

@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 import { ReactComponent as BGItemL } from "../../assets/img/landingBGItemLeft.svg";
 import { ReactComponent as BGItemR } from "../../assets/img/landingBGItemRight.svg";
 import passBlueItem from "../../assets/img/blueTiket.png";
@@ -26,11 +27,23 @@ export default function LandingItem(props: PropsTypeLanding) {
     <HeadItem>
       <RobotItemWrap>
         {props.type === "pass" ? (
-          <img src={passBlueItem} alt="" />
+          <LazyLoadImage
+            alt={''}
+            effect="blur"
+            src={passBlueItem} />
+
         ) : props.type === "body" ? (
-          <img src={passItem} alt="" />
+          <LazyLoadImage
+            alt={''}
+            effect="blur"
+            src={passItem} />
+
         ) : (
-          <img src={petItem} alt="" />
+          <LazyLoadImage
+            alt={''}
+            effect="blur"
+            src={petItem} />
+
         )}
 
         <EllipceRobot type={props.type} />
@@ -43,8 +56,8 @@ export default function LandingItem(props: PropsTypeLanding) {
           {props.type === "pass"
             ? "PREMIUM PASS"
             : props.type === "body"
-            ? "BODY"
-            : "PET PASS"}
+              ? "BODY"
+              : "PET PASS"}
         </h2>
         <p>
           Limited to 3 per account
@@ -130,7 +143,7 @@ const RobotItemWrap = styled.div`
 
   top: -20px;
 
-  > img {
+  > span > img {
     z-index: 1;
     @media (max-width: 1280px) {
       height: 310px;

@@ -1,6 +1,7 @@
 import { Dispatch, SetStateAction, useState } from "react";
 import styled from "styled-components";
 import loadable from '@loadable/component';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 import { ReactComponent as iconSea } from "../assets/img/landingOpenSea.svg";
 import { ReactComponent as iconTwitter } from "../assets/img/landingTwitter.svg";
 import { ReactComponent as iconDiscord } from "../assets/img/landingDiscord.svg";
@@ -30,7 +31,6 @@ import premBGPass from "../assets/img/premPassBGTittle.png";
 import freeBGPass from "../assets/img/freePassBGTittle.png";
 import freeIconPass from "../assets/img/freePassIconTittle.svg";
 import passMainBG from "../assets/img/landingPassMainBG.png";
-import mainLogo from "../assets/img/landingMainLogo.png";
 import menuBG from "../assets/img/landingMenuBG.png";
 import mainPetBG from "../assets/img/landingPetsPassBGImg.png";
 import petImgLT from "../assets/img/petsImgLT.png";
@@ -50,6 +50,10 @@ import factionImgR from "../assets/img/landingFactionImg3.png";
 import footerLogo from "../assets/img/landingFooterImg.png";
 import passport from "../assets/img/passport.png";
 import accept from "../assets/img/correct.png";
+
+import mainLogo from "../assets/img/landingMainLogo.png";
+// const mainLogo = loadable(() => import('../assets/img/landingMainLogo.png'));
+
 
 const Modal = loadable(() => import('../components/common/Modal'));
 const TedButton = loadable(() => import('../components/common/Button/TedButton'));
@@ -164,7 +168,10 @@ const Landing = (props: LandingProps) => {
         </MenuContainer>
 
         <HeaderContent>
-          <img src={mainLogo} alt="" />
+          <LazyLoadImage
+            alt={''}
+            effect="blur"
+            src={mainLogo} />
 
           <TextPass>
             <div>
@@ -177,23 +184,38 @@ const Landing = (props: LandingProps) => {
               </div>
 
               <div>
-                <img src={accept} alt="" />
+                <LazyLoadImage
+                  alt={''}
+                  effect="blur"
+                  src={accept} />
                 <p>Limited to 1 mint per wallet address Independent</p>
               </div>
               <div>
-                <img src={accept} alt="" />
+                <LazyLoadImage
+                  alt={''}
+                  effect="blur"
+                  src={accept} />
                 <p>Ut enim ad minim veniam, quis nostrud exercitation</p>
               </div>
               <div>
-                <img src={accept} alt="" />
+                <LazyLoadImage
+                  alt={''}
+                  effect="blur"
+                  src={accept} />
                 <p>Сonsectetur adipiscing elit, sed do eiusmod</p>
               </div>
               <div>
-                <img src={accept} alt="" />
+                <LazyLoadImage
+                  alt={''}
+                  effect="blur"
+                  src={accept} />
                 <p>Excepteur sint occaecat cupidatat non proident</p>
               </div>
               <div>
-                <img src={accept} alt="" />
+                <LazyLoadImage
+                  alt={''}
+                  effect="blur"
+                  src={accept} />
                 <p>
                   Sunt in culpa qui officia deserunt mollit anim id est laborum
                 </p>
@@ -251,7 +273,10 @@ const Landing = (props: LandingProps) => {
         </AboutTitle>
         <AboutContent>
           <PhaseLeft>
-            <img src={aboutLeftRobot} alt="" />
+            <LazyLoadImage
+              alt={''}
+              effect="blur"
+              src={aboutLeftRobot} />
             <AboutPhaseTextImg>
               <h1>phase 1 + 2</h1>
             </AboutPhaseTextImg>
@@ -274,7 +299,10 @@ const Landing = (props: LandingProps) => {
             </p>
           </AboutText>
           <PhaseRight>
-            <img src={aboutRightGirl} alt="" />
+            <LazyLoadImage
+              alt={''}
+              effect="blur"
+              src={aboutRightGirl} />
             <AboutPhaseTextImg>
               <h6>phase 3</h6>
             </AboutPhaseTextImg>
@@ -305,7 +333,10 @@ const Landing = (props: LandingProps) => {
           </PlatformLootTabs>
           <PlatformLootPageWrapp>
             <PlatformLootPage>
-              <img src={platformLootPage} alt="" />
+              <LazyLoadImage
+                alt={''}
+                effect="blur"
+                src={platformLootPage} />
             </PlatformLootPage>
           </PlatformLootPageWrapp>
         </PlatformLootPageWrapper>
@@ -316,7 +347,10 @@ const Landing = (props: LandingProps) => {
           <ProdBGLeftEffect />
           <ProdBGRightEffect />
           <ProductLeft>
-            <img src={productLeftImg} alt="" />
+            <LazyLoadImage
+              alt={''}
+              effect="blur"
+              src={productLeftImg} />
           </ProductLeft>
           <ProductText>
             <h2>our products</h2>
@@ -334,14 +368,20 @@ const Landing = (props: LandingProps) => {
             </ProdTimer>
           </ProductText>
           <ProductRight>
-            <img src={productRightImg} alt="" />
+            <LazyLoadImage
+              alt={''}
+              effect="blur"
+              src={productRightImg} />
           </ProductRight>
         </ProductPage>
       </ProductWrapper>
 
       <PassWrapper>
         <LeftPassTimer>
-          <img src={passImg} alt="" />
+          <LazyLoadImage
+            alt={''}
+            effect="blur"
+            src={passImg} />
           <h2>
             Premium <br /> season pass
           </h2>
@@ -362,7 +402,10 @@ const Landing = (props: LandingProps) => {
               <div>
                 <h5>Free season pass</h5>
                 <p>Lorem ipsum dolor</p>
-                <img src={freeIconPass} alt="" />
+                <LazyLoadImage
+                  alt={''}
+                  effect="blur"
+                  src={freeIconPass} />
               </div>
             </FreePass>
             <FreeKart
@@ -394,7 +437,10 @@ const Landing = (props: LandingProps) => {
               <div>
                 <h5>Premium season pass</h5>
                 <p>Lorem ipsum dolor</p>
-                <img src={premIconPass} alt="" />
+                <LazyLoadImage
+                  alt={''}
+                  effect="blur"
+                  src={premIconPass} />
               </div>
             </PremPass>
             <PremiumKart
@@ -439,12 +485,24 @@ const Landing = (props: LandingProps) => {
         </PetText>
         <PetsImgWrapper>
           <TopPetImg>
-            <img src={petImgLT} alt="" />
-            <img src={petImgRT} alt="" />
+            <LazyLoadImage
+              alt={''}
+              effect="blur"
+              src={petImgLT} />
+            <LazyLoadImage
+              alt={''}
+              effect="blur"
+              src={petImgRT} />
           </TopPetImg>
           <BottomPetImg>
-            <img src={petImgLB} alt="" />
-            <img src={petImgRB} alt="" />
+            <LazyLoadImage
+              alt={''}
+              effect="blur"
+              src={petImgLB} />
+            <LazyLoadImage
+              alt={''}
+              effect="blur"
+              src={petImgRB} />
           </BottomPetImg>
         </PetsImgWrapper>
       </PetWrapper>
@@ -465,7 +523,10 @@ const Landing = (props: LandingProps) => {
         <RoadMapContent>
           <RoadItemsWrapper>
             <RoadMapItem>
-              <img src={roadMap1} loading="lazy" alt="" />
+              <LazyLoadImage
+                alt={''}
+                effect="blur"
+                src={roadMap1} />
             </RoadMapItem>
             <CircleStyled />
             <RoadMapText>
@@ -491,45 +552,19 @@ const Landing = (props: LandingProps) => {
               </p>
             </RoadMapText>
             <RoadMapItem>
-              <img src={roadMap2} loading="lazy" alt="" />
+              <LazyLoadImage
+                alt={''}
+                effect="blur"
+                src={roadMap2} />
             </RoadMapItem>
             <CircleStyled />
           </RoadItemsWrapper>
           <RoadItemsWrapper>
             <RoadMapItem>
-              <img src={roadMap3} alt="" />
-            </RoadMapItem>
-            <CircleStyled />
-            <RoadMapText>
-              <h2>Register of login</h2>
-              <p>
-                The Mech Identity Protocol project is a new form of dynamic NFT
-                collection which will be deployed in multiple phases, starting
-                with 10,000 Modular Mech Heads and their drivers. Mech Bodies
-                will be releasing later down the line so you can combine and
-                assemble your own fully customized Mech.
-              </p>
-            </RoadMapText>
-          </RoadItemsWrapper>
-          <RoadItemsWrapper>
-            <RoadMapText>
-              <h2>earn credits</h2>
-              <p>
-                The Mech Identity Protocol project is a new form of dynamic NFT
-                collection which will be deployed in multiple phases, starting
-                with 10,000 Modular Mech Heads and their drivers. Mech Bodies
-                will be releasing later down the line so you can combine and
-                assemble your own fully customized Mech.
-              </p>
-            </RoadMapText>
-            <RoadMapItem>
-              <img src={roadMap4} loading="lazy" alt="" />
-            </RoadMapItem>
-            <CircleStyled />
-          </RoadItemsWrapper>
-          <RoadItemsWrapper>
-            <RoadMapItem>
-              <img src={roadMap5} loading="lazy" alt="" />
+              <LazyLoadImage
+                alt={''}
+                effect="blur"
+                src={roadMap3} />
             </RoadMapItem>
             <CircleStyled />
             <RoadMapText>
@@ -555,7 +590,48 @@ const Landing = (props: LandingProps) => {
               </p>
             </RoadMapText>
             <RoadMapItem>
-              <img src={roadMap6} loading="lazy" alt="" />
+              <LazyLoadImage
+                alt={''}
+                effect="blur"
+                src={roadMap4} />
+            </RoadMapItem>
+            <CircleStyled />
+          </RoadItemsWrapper>
+          <RoadItemsWrapper>
+            <RoadMapItem>
+              <LazyLoadImage
+                alt={''}
+                effect="blur"
+                src={roadMap5} />
+            </RoadMapItem>
+            <CircleStyled />
+            <RoadMapText>
+              <h2>Register of login</h2>
+              <p>
+                The Mech Identity Protocol project is a new form of dynamic NFT
+                collection which will be deployed in multiple phases, starting
+                with 10,000 Modular Mech Heads and their drivers. Mech Bodies
+                will be releasing later down the line so you can combine and
+                assemble your own fully customized Mech.
+              </p>
+            </RoadMapText>
+          </RoadItemsWrapper>
+          <RoadItemsWrapper>
+            <RoadMapText>
+              <h2>earn credits</h2>
+              <p>
+                The Mech Identity Protocol project is a new form of dynamic NFT
+                collection which will be deployed in multiple phases, starting
+                with 10,000 Modular Mech Heads and their drivers. Mech Bodies
+                will be releasing later down the line so you can combine and
+                assemble your own fully customized Mech.
+              </p>
+            </RoadMapText>
+            <RoadMapItem>
+              <LazyLoadImage
+                alt={''}
+                effect="blur"
+                src={roadMap6} />
             </RoadMapItem>
             <CircleStyled />
           </RoadItemsWrapper>
@@ -584,22 +660,34 @@ const Landing = (props: LandingProps) => {
         </FactionsText>
         <FactionsImg>
           <ItemFaction>
-            <img src={factionImgL} loading="lazy" alt="" />
+            <LazyLoadImage
+              alt={''}
+              effect="blur"
+              src={factionImgL} />
             <h3>T1</h3>
           </ItemFaction>
           <BigItem>
-            <img src={factionImgC} loading="lazy" alt="" />
+            <LazyLoadImage
+              alt={''}
+              effect="blur"
+              src={factionImgC} />
             <h2>T3</h2>
           </BigItem>
           <ItemFaction>
-            <img src={factionImgR} loading="lazy" alt="" />
+            <LazyLoadImage
+              alt={''}
+              effect="blur"
+              src={factionImgR} />
             <h3>T2</h3>
           </ItemFaction>
         </FactionsImg>
       </FactionsWrapper>
 
       <Footer>
-        <img src={footerLogo} loading="lazy" alt="" />
+        <LazyLoadImage
+          alt={''}
+          effect="blur"
+          src={footerLogo} />
         <p>© 2021 MIPNetwork.com All rights reserved.</p>
       </Footer>
     </LandingPage>
@@ -676,7 +764,7 @@ const LeftText = styled.div`
       color: #ffffff;
       margin-top: 20px;
     }
-    > img {
+    img {
       height: 20px;
       margin-right: 10px;
     }
@@ -903,7 +991,7 @@ const BigItem = styled.div`
   @media (max-width: 480px) {
     margin: 40px 0 0 0;
   }
-  > img {
+  > span > img {
     @media (max-width: 1280px) {
       height: 300px;
     }
@@ -925,7 +1013,7 @@ const ItemFaction = styled.div`
     font-family: Glitch;
   }
 
-  > img {
+  > span > img {
     @media (max-width: 1280px) {
       height: 200px;
     }
@@ -1766,7 +1854,7 @@ const ProductLeft = styled.div`
     left: -57px;
   }
 
-  > img {
+  > span > img {
     @media (max-width: 1545px) {
       height: 470px;
     }
@@ -1902,7 +1990,7 @@ const ProductRight = styled.div`
   @media (max-width: 860px) {
     display: none;
   }
-  > img {
+  > span > img {
     margin-top: 31px;
     @media (max-width: 1545px) {
       width: 414px;
@@ -1999,7 +2087,7 @@ const PlatformLootPage = styled.div`
     height: 386px;
   }
 
-  > img {
+  > span > img {
     position: absolute;
     left: -107px;
     top: -29px;
@@ -2216,7 +2304,7 @@ const PhaseLeft = styled.div`
   align-items: center;
   position: relative;
 
-  > img {
+  > span > img {
     z-index: 1;
     @media (max-width: 1420px) {
       height: 500px;
@@ -2396,7 +2484,7 @@ const HeaderContent = styled.div`
   align-items: center;
   position: relative;
 
-  > img {
+  > span > img {
     margin: -50px 0 14px 0;
     @media (max-width: 1500px) {
       display: none;

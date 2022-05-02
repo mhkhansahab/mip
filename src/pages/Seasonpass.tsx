@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import loadable from '@loadable/component';
+import { LazyLoadImage } from "react-lazy-load-image-component";
 import { connect, ticketPay } from "../metamask/balanceAndGaragePaidExample";
 import { ReactComponent as BgEffect2 } from "../assets/img/bgEffectPass2.svg";
 import { ReactComponent as BgEffect1 } from "../assets/img/bgEffectPass1.svg";
@@ -55,23 +56,38 @@ const Seasonpass = (props: SeasonpassPropsType) => {
               </div>
 
               <div>
-                <img src={accept} alt="" />
+                <LazyLoadImage
+                  alt={''}
+                  effect="blur"
+                  src={accept} />
                 <p>Limited to 1 mint per wallet address Independent</p>
               </div>
               <div>
-                <img src={accept} alt="" />
+                <LazyLoadImage
+                  alt={''}
+                  effect="blur"
+                  src={accept} />
                 <p>Ut enim ad minim veniam, quis nostrud exercitation</p>
               </div>
               <div>
-                <img src={accept} alt="" />
+                <LazyLoadImage
+                  alt={''}
+                  effect="blur"
+                  src={accept} />
                 <p>Сonsectetur adipiscing elit, sed do eiusmod</p>
               </div>
               <div>
-                <img src={accept} alt="" />
+                <LazyLoadImage
+                  alt={''}
+                  effect="blur"
+                  src={accept} />
                 <p>Excepteur sint occaecat cupidatat non proident</p>
               </div>
               <div>
-                <img src={accept} alt="" />
+                <LazyLoadImage
+                  alt={''}
+                  effect="blur"
+                  src={accept} />
                 <p>
                   Sunt in culpa qui officia deserunt mollit anim id est laborum
                 </p>
@@ -178,7 +194,7 @@ const LeftText = styled.div`
       color: #ffffff;
       margin-top: 20px;
     }
-    > img {
+    > span > img {
       height: 20px;
       margin-right: 10px;
     }

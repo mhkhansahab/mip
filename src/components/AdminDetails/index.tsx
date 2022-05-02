@@ -1,5 +1,6 @@
 import { useState } from "react";
 import styled from "styled-components";
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 import { useValidateAdminImages } from "../../hooks/useValidateAdminImages";
 import validateImg from "../../assets/img/validate.png";
 import closeImg from "../../assets/img/close.png";
@@ -114,17 +115,24 @@ const AdminDetails = () => {
                       <td>{row.Size}</td>
                       <td>
                         {row.approved && !row.exist ? (
-                          <img src={validateImg} alt="" />
+                          <LazyLoadImage
+                            alt={''}
+                            effect="blur"
+                            src={validateImg} />
                         ) : (
-                          <img src={closeImg} alt="" />
+                          <LazyLoadImage
+                            alt={''}
+                            effect="blur"
+                            src={closeImg} />
+
                         )}
                       </td>
                       <td>
                         {row.approved && !row.exist
                           ? "None"
                           : row.approved
-                          ? "exist"
-                          : row.traitError}
+                            ? "exist"
+                            : row.traitError}
                       </td>
                     </tr>
                   ))}

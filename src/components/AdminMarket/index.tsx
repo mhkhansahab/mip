@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useParams } from "react-router-dom";
 import styled from "styled-components";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 import { imageRoute } from "../../utils/api";
 import CustomLoader from "../common/Loader";
 import Modal from "../common/Modal";
@@ -148,13 +149,20 @@ const AdminMarket = () => {
                   <PriceDiv>
                     <CristalCount>
                       <span>{invItem.price} </span>
-                      <img src={smallDiamond} alt="" />
+                      <LazyLoadImage
+                        alt={''}
+                        effect="blur"
+                        src={smallDiamond} />
+
                     </CristalCount>
                   </PriceDiv>
                   <SellDiv>
                     <CristalCount>
                       <span>{invItem.sell} </span>
-                      <img src={smallDiamond} alt="" />
+                      <LazyLoadImage
+                        alt={''}
+                        effect="blur"
+                        src={smallDiamond} />
                     </CristalCount>
                   </SellDiv>
                   <CheckMarket>
@@ -162,17 +170,25 @@ const AdminMarket = () => {
                       Edit
                     </EditDetail>
                     {invItem.market ? (
-                      <img
-                        src={failed}
-                        alt=""
-                      // onClick={() => addDetailMarket({ id: invItem.id })}
-                      />
+                           <LazyLoadImage
+                           alt={''}
+                           effect="blur"
+                           src={failed} />
+                      // <img
+                      //   src={failed}
+                      //   alt=""
+                      // // onClick={() => addDetailMarket({ id: invItem.id })}
+                      // />
                     ) : (
-                      <img
-                        src={accept}
-                        alt=""
-                      //onClick={() => deleteDetailMarket({ id: invItem.id })}
-                      />
+                      <LazyLoadImage
+                      alt={''}
+                      effect="blur"
+                      src={accept} />
+                      // <img
+                      //   src={accept}
+                      //   alt=""
+                      // //onClick={() => deleteDetailMarket({ id: invItem.id })}
+                      // />
                     )}
                   </CheckMarket>
                 </Column>
@@ -220,7 +236,7 @@ const EditDetail = styled.div`
 `;
 
 const CheckMarket = styled.div`
-  > img {
+  > span > img {
     height: 25px;
   }
 `;
@@ -237,7 +253,7 @@ const CristalCount = styled.div`
     color: #ffd63d;
   }
 
-  > img {
+  > span > img {
     margin-left: 6px;
   }
 `;

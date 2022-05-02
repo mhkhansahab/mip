@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import styled from "styled-components";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 import bookItem from "../../../assets/img/bonusesBookItem.svg";
 import gameItem from "../../../assets/img/bonusesGameIcon.svg";
 import userItem from "../../../assets/img/bonusesUserIcon.svg";
@@ -27,11 +28,21 @@ export default function BonusesNews(props: PropsNewsType) {
   return (
     <NewsWrapper onClick={() => setIsOpen(!isOpen)} ref={ref}>
       {props.type === "user" ? (
-        <img src={userItem} alt="" />
+        <LazyLoadImage
+          alt={''}
+          effect="blur"
+          src={userItem} />
       ) : props.type === "book" ? (
-        <img src={bookItem} alt="" />
+        <LazyLoadImage
+          alt={''}
+          effect="blur"
+          src={bookItem} />
       ) : (
-        <img src={gameItem} alt="" />
+        <LazyLoadImage
+          alt={''}
+          effect="blur"
+          src={gameItem
+          } />
       )}
 
       <TextNews>
@@ -43,11 +54,21 @@ export default function BonusesNews(props: PropsNewsType) {
         <ModalWrapper>
           <LeftIcon>
             {props.type === "user" ? (
-              <img src={userItem} alt="" />
+              <LazyLoadImage
+                alt={''}
+                effect="blur"
+                src={userItem} />
             ) : props.type === "book" ? (
-              <img src={bookItem} alt="" />
+              <LazyLoadImage
+                alt={''}
+                effect="blur"
+                src={bookItem} />
             ) : (
-              <img src={gameItem} alt="" />
+              <LazyLoadImage
+                alt={''}
+                effect="blur"
+                src={gameItem
+                } />
             )}
           </LeftIcon>
           <RightText>
@@ -151,12 +172,12 @@ const NewsWrapper = styled.div`
     margin-left: 10px;
   }
 
-  > img {
+  > span > img {
     position: absolute;
   }
   :hover {
     cursor: pointer;
-    > img {
+    > span > img {
       transform: scale(1.2, 1.2);
     }
     > div > p {

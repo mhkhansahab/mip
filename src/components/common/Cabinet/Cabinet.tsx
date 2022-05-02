@@ -1,5 +1,6 @@
 import { useState } from "react";
 import styled from "styled-components";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 import photo from "../../../assets/img/photo.png";
 import box from "../../../assets/img/smallBox.svg";
 import diamond from "../../../assets/img/smallDiamond.svg";
@@ -35,14 +36,25 @@ export const Cabinet = (props: PropsCabinet) => {
             </Wallet>
             <InnerInfo>
               <Boxes>
-                <img src={box} alt="" />
+                <LazyLoadImage
+                  alt={''}
+                  effect="blur"
+                  src={box} />
+
                 <span>{props.countCase}</span>
               </Boxes>
               <Diamonds>
-                <img src={diamond} alt="" />
+              <LazyLoadImage
+                  alt={''}
+                  effect="blur"
+                  src={diamond} />
                 <span>{props.profileData?.balance || 0} MIP</span>
               </Diamonds>
-              <img src={send} alt="" />
+              <LazyLoadImage
+                  alt={''}
+                  effect="blur"
+                  src={send} />
+
             </InnerInfo>
           </MiddleCabinetInfo>
           <LogoutIconStyled onClick={handleLogout} />

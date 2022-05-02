@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 import bonus from "../../../../src/assets/img/Bonus.png";
 import smallDiamond from "../../../assets/img/smallDiamond.svg";
 
@@ -15,7 +16,10 @@ export default function Bonus(props: BonusProps) {
     <WrapperBonus>
       <NameBonus>
         <Img>
-          <img src={bonus} alt="" />
+        <LazyLoadImage
+                        alt={''}
+                        effect="blur"
+                        src={bonus} />
         </Img>
         <Descr>
           <h3>{props.nameBonus}</h3>
@@ -28,7 +32,10 @@ export default function Bonus(props: BonusProps) {
         </Progress>
         <Reward>
           + {props.rewardCoin} MIP
-          <img src={smallDiamond} alt="" />
+          <LazyLoadImage
+                        alt={''}
+                        effect="blur"
+                        src={smallDiamond} />
         </Reward>
       </InfoBonus>
     </WrapperBonus>

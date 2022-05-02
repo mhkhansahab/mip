@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 import borderActiveItem from "../../assets/img/landingActiveBorderGallery.svg";
 import borderItem from "../../assets/img/landingBorderGallery.svg";
 import imgGalery from "../../assets/img/landingImgGallery.png";
@@ -10,7 +11,10 @@ type PropsGalleryType = {
 export default function LandingItemGallery(props: PropsGalleryType) {
   return (
     <ItemGalleryWrapper active={props.activeGallery}>
-      <img src={imgGalery} alt="" />
+       <LazyLoadImage
+            alt={''}
+            effect="blur"
+            src={imgGalery} />
     </ItemGalleryWrapper>
   );
 }
@@ -77,7 +81,7 @@ const ItemGalleryWrapper = styled.div<{
         width: 260px; height: 220px;
       }`};
 
-  > img {
+  > span > img {
     position: absolute;
     border-radius: 4px;
 

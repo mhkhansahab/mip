@@ -3,6 +3,7 @@ import { useHistory } from "react-router-dom";
 import { useState } from "react";
 import Slider from "react-slick";
 import loadable from '@loadable/component';
+import { LazyLoadImage } from "react-lazy-load-image-component";
 import { ReactComponent as ArrowRight } from "../assets/img/bonusesArrow.svg";
 import { ReactComponent as LogoutIcon } from "../assets/img/logout.svg";
 import { ReactComponent as BorderTop } from "../assets/img/bonusesBorderTop.svg";
@@ -102,7 +103,11 @@ const ProfileBonuses = (props: ProfileBonusesPropsType) => {
               <DiamondsWrapper>
                 <Diamonds>
                   <Mips>
-                    <img src={diamond} alt="" />
+                    <LazyLoadImage
+                      alt={''}
+                      effect="blur"
+                      src={diamond} />
+
                     <span>{props.profile.balance} MIP</span>
                   </Mips>
                   <p>Balance</p>
@@ -111,7 +116,10 @@ const ProfileBonuses = (props: ProfileBonusesPropsType) => {
                 <DiamondsBonus>
                   <Mips>
                     <span>+ 280 MIP</span>
-                    <img src={diamond} alt="" />
+                    <LazyLoadImage
+                      alt={''}
+                      effect="blur"
+                      src={diamond} />
                   </Mips>
                   <p>Dayly bonus</p>
                 </DiamondsBonus>
@@ -165,7 +173,10 @@ const ProfileBonuses = (props: ProfileBonusesPropsType) => {
               .map(robot => (
                 <RobotItemActive key={robot.id}>
                   <ImgWrapper>
-                    <img src={robotPass} alt="" />
+                    <LazyLoadImage
+                      alt={''}
+                      effect="blur"
+                      src={robotPass} />
                   </ImgWrapper>
 
                   <AboutPass>
@@ -253,7 +264,7 @@ const ProfileBonuses = (props: ProfileBonusesPropsType) => {
                 So far, you have no bonuses. Upgrade your robots to get them
                 <TedButton
                   color="green"
-                  onclick={() => {}}
+                  onclick={() => { }}
                   size="small"
                   width="140"
                 >
@@ -542,7 +553,7 @@ const BonusTab = styled.div<{ active: boolean }>`
 `;
 
 const Mips = styled.div`
-  > img {
+  > span > img {
     margin-bottom: -3px;
   }
 `;

@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 import kartFree from "../../../assets/img/kartPassFree.png";
 import { MipKart } from "./MipKart";
 import { RobotKart } from "./RobotKart";
@@ -39,11 +40,17 @@ const FreeKart = (props: KartPassPropsType) => {
         <KartFree active={props.active} lock={props.lock}>
           {props.lock ? (
             <AcceptKart>
-              <img src={validateImg} alt="" />
+              <LazyLoadImage
+                alt={''}
+                effect="blur"
+                src={validateImg} />
             </AcceptKart>
           ) : (
             <LockKart>
-              <img src={lockPass} alt="" />
+              <LazyLoadImage
+                alt={''}
+                effect="blur"
+                src={lockPass} />
             </LockKart>
           )}
         </KartFree>
@@ -78,7 +85,7 @@ const AcceptKart = styled.div`
   justify-content: center;
   align-items: center;
 
-  > img {
+  > span > img {
     z-index: 3;
   }
 `;
@@ -95,7 +102,7 @@ const LockKart = styled.div`
   justify-content: center;
   align-items: center;
 
-  > img {
+  > span > img {
     z-index: 3;
   }
 `;
